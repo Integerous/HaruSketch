@@ -12,7 +12,7 @@
              initial-scale=1, minimum-scale=1, user-scalable=1"/>
 <title>Insert title here</title>
 
-<link href="../resources/css/style.css" type="text/css" rel="stylesheet">
+<link href="${ctx}/resources/css/style.css" type="text/css" rel="stylesheet">
 
 
 </head>
@@ -22,8 +22,8 @@
 			<nav class="main-menu">
 			<h1 class="hidden">메인메뉴</h1>
 				<ul>	
-					<li><a href=""><img src="../resources/images/ic_dehaze_black_24dp_1x.png"></a></li>
-					<li><a href=""><img src="../resources/images/ic_search_black_24dp_1x.png"></a></li>
+					<li><a href=""><img src="${ctx}/resources/images/ic_dehaze_black_24dp_1x.png"></a></li>
+					<li><a href=""><img src="${ctx}/resources/images/ic_search_black_24dp_1x.png"></a></li>
 					<!-- <li><li><a href=""><img src=""></a></li></li> -->
 				</ul>
 			</nav>
