@@ -24,23 +24,27 @@
 	<div class="header">
 		<div class="h-nested">
 			<div class="top-bar">
-				<div class="tb-left">
-					<div><a href="">아이디어스</a></div>
-					<div><a href="" class="blog-store">블로그스토어</a></div>
-				</div>
-				<div class="tb-right">
-					<div>로그인</div>
-					<div>회원가입</div>
-					<div>마이페이지</div>
+				<div class="tb-wrap">
+					<div class="tb-left">
+						<a href="https://www.idus.com/w/artist/d21195f6-830f-42a8-9082-cbcfe738ab40" class="idus">
+							<img src="${ctx}/resources/images/idus-logo.png"></a>
+						<a href="http://smartstore.naver.com/harusketch" class="storefarm">
+							<img src="${ctx}/resources/images/n-logo.png"></a>
+					</div>
+					<div class="tb-right">
+						<div>Login</div>
+						<div>Join</div>
+						<div>MyPage</div>
+					</div>
 				</div>
 			</div>		
 			<div class="logo-bar">
-				<a href="/index"><img src="${ctx}/resources/images/logo_banilaco.png"></a>
+				<a href="/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</div>			
 			<div class="nav-bar">
 				<div class="nav-wrap">
-					<div class="products">Products</div>
-					<div class="reviews">Reviews</div>
+					<div class="products">Product</div>
+					<div class="reviews">Review</div>
 					<div class="order">Order</div>
 					<div class="contact">Contact</div>
 				</div>
