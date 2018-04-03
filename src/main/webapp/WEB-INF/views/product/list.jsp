@@ -53,10 +53,96 @@
 	</div>
 		
 <!-- ------------------메인------------------- -->	
-	<div class="main">Main</div>
+	<div class="main">
+		<div class="m-nested">
+			<div class="list-title">
+				<h1>판매상품 목록</h1>
+			</div>
+			<div class="list-filter">
+				<ul class="lf-wrap">
+					<li>판매량순</li>
+					<li>최신순</li>
+					<li>할인상품</li>
+				</ul>
+			</div>
+			<div class="list-content">
+				<div class="lc-wrap">
+					<ul class="grid-wrap">
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+							</div>
+							<div class="txt-wrap">
+								선물용 복주머니 캐리커쳐
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 <!-- ------------------풋터------------------- -->	
-	<div class="footer">Footer</div>
+	<div class="footer">Footer
+	
+	</div>
+<!-- ------------------풋터 끝------------------- -->
 </div>
 	
 
