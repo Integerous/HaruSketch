@@ -9,8 +9,10 @@
 			<ul>
 				<c:forEach var="note" items="${notes}">
 				<li>
-					<div><a href="">${note.title}</a></div>
-					<div>${note.content}</div>
+					<div><a href="${note.id}">${note.title}</a></div>
+					<div class="text ellipsis">
+						<span class="text-concat">${note.content}</span>
+					</div>
 					<div><span>분류</span><span>${note.regDate}</span></div>
 				</li>
 				</c:forEach>

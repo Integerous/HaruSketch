@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,30 +30,38 @@ public class ProductController {
 	
 	
 	@RequestMapping("list")
-	public String list() {
+	public String list(Model model) {
 		
-		return "member/product/list";
+		List<Product> list = service.getProductList(1);
+		
+		model.addAttribute("products", list);
+		
+		return "member.product.list";
 	}
 	
 	
-	@RequestMapping("detail")
-	public String detail() {
+	@RequestMapping("{id}") //여기 원래 detail
+	public String detail(@PathVariable("id") Integer id, Model model) {
 		
-		return "member/product/detail";
+		Product product = service.getProduct(id);
+		
+		model.addAttribute("product", product);
+		
+		return "member.product.detail";
 	}
 	
 	
 	@RequestMapping("edit")
 	public String edit() {
 		
-		return "member/product/edit";
+		return "member.product.edit";
 	}
 	
 	
 	@RequestMapping(value="reg" , method=RequestMethod.GET)
 	public String reg() {
 		
-		return "member/product/reg";
+		return "member.product.reg";
 	}
 	
 	@RequestMapping(value="reg" , method=RequestMethod.POST)
