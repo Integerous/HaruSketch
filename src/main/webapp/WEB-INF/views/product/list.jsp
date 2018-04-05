@@ -184,8 +184,33 @@
 	</div>
 	
 <!-- ------------------풋터------------------- -->	
-	<div class="footer">Footer
-	
+	<div class="footer">
+		<div class="f-nested">
+			<div class="f-text">
+				<div>
+					하루스케치 로고
+				</div>	
+				<div id="company-info">
+					<p>Haru Sketch</p>
+					<p>대표 : 박정은</p>
+					<p>주소 : 경기도 안양시 동안구 관평대로 333 현대아파트 10동</p>
+					<p>대표번호 : 010-9501-1441</p>
+					<p>E-MAIL : je31203@gmail.com</p>
+					<p>사업자등록번호 : 123-12-12345&nbsp;
+						<a href="" class="company" target="_blank">[사업자정보확인]</a>
+					</p>
+					<p>통신판매업신호 : 2016-안양동안-1234호</p>
+					<p>개인정보보호책임자 : 한정수</p>
+					<strong class="copy">COPYRIGHT @ 2018 HARUSKETCH. ALL RIGHTS RESERVED.</strong>	
+				</div>
+				<div>
+					제품 카테고리
+				</div>	
+			</div>
+			
+			
+			<div id="btTEXT">HARU SKETCH</div>
+		</div>
 	</div>
 <!-- ------------------풋터 끝------------------- -->
 </div>

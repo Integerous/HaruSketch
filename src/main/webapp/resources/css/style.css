@@ -26,6 +26,9 @@ ul{
 a{
 	text-decoration: none;
 }
+p{
+	margin: 0;
+}
 -------------------------------------------------------						
 
 .grid{
@@ -248,8 +251,51 @@ a{
 /* --------------풋터--------------- */
 .footer{
 	grid-area: footer;
+	
+	background: #464648;
+}
+.f-nested{
+	display: grid;
+	justify-content: center;
+	
+}
+.f-text{
+	display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	
 }
 
+#company-info{
+	padding: 30px;
+	margin: 0;
+	font-size: 13px;
+	color: #808080;
+	font-weight: 600;
+	line-height: 1.8;
+}
+
+.company{
+	text-decoration: none;
+	border-bottom: 1px solid #808080;
+}
+
+.company a{
+	color: #808080;
+}
+#btTEXT{
+	display: flex;
+		justify-content: center;
+	padding: 30px 0;
+	/* text-align: center; */
+	max-width: 1400px;
+	color: #8d8d8e;
+	border-top: 1px solid #59595b;
+	line-height: 1.5;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: 0.3em;
+	word-break: keep-all;
+}
 /* --------------데스크탑--------------- */
 @media screen and (min-width: 800px){
 	.grid{
