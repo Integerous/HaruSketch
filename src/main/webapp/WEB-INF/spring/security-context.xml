@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
     xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="
+    
+    	http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
+        
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-</beans>
+	<http> <!-- auto-config "true"는 알아서 인증과 권한을 알아서 -->
+		<form-login login-page="/guest/login"/> <!-- 내가 사용할 로그인 페이지 -->
+		<intercept-url pattern ="/member/**" access="hasRole('ROLE_MEMBER')" />
+		<!-- intercept-url을 작성하면 이 url에서 인증을 해야함  member는 내가 정해야하는 그룹명-->
+		<intercept-url pattern ="/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<csrf disabled="true"/>
+	</http>
+	
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="newlec" password="{noop}111" authorities="ROLE_MEMBER,ROLE_ADMIN,ROLE_AUTHOR"/>
+				<user name="dragon" password="{noop}111" authorities="ROLE_MEMBER"/>
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
