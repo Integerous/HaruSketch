@@ -31,11 +31,11 @@
 						<a href="http://smartstore.naver.com/harusketch" class="storefarm">
 							<img src="${ctx}/resources/images/n-logo.png"></a>
 					</div>
-					<div class="tb-right">
-						<div>Login</div>
-						<div>Join</div>
-						<div>MyPage</div>
-					</div>
+					<ul class="tb-right">
+						<li>Login</li>
+						<li>Join</li>
+						<li>MyPage</li>
+					</ul>
 				</div>
 			</div>		
 			<div class="logo-bar">
