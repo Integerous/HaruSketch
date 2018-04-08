@@ -44,7 +44,9 @@
     <bean class="com.harusketch.dao.mybatis.MyBatisProductDao">
     </bean>
     
+    <bean class="com.harusketch.service.GuestService"/>
     <bean class="com.harusketch.service.ProductService"/>
+    
     <bean class="com.harusketch.service.member.ProductService"/>
     
     

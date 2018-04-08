@@ -211,17 +211,21 @@ p{
 		
 /* -----list-content----- */
 .p-list-content{
+	display: flex;
+		justify-content: center;
 	padding: 30px 0;
 }
 
 .plc-wrap{
-	margin:auto;
+	
+	/* margin:auto; */
 	width: 60%;
 }
 
 .grid-wrap{
 	display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(238px,1fr));
+		grid-template-columns: 
+		repeat(auto-fill, minmax(200px,auto));
 		/* grid-template-rows: repeat(2, 1fr); */
 		/* grid-auto-row: 238px; */
 		grid-column-gap: 1em;
@@ -234,8 +238,8 @@ p{
 
 }
 .img-wrap img{
-	width: 238px;
-	height: 238px;
+	/* width: 238px;
+	height: 238px; */
 	max-width: 100%;
 	max-height: 100%;
 }
@@ -252,7 +256,7 @@ p{
 /* --------------풋터--------------- */
 .footer{
 	grid-area: footer;
-	
+	margin-top: 20px;
 	background: #464648;
 }
 .f-nested{
@@ -262,17 +266,28 @@ p{
 }
 .f-text{
 	display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+	.f-text div{
+		padding: 30px;
+		margin: 0;
+		font-size: 13px;
+		color: #808080;
+		font-weight: 600;
+		line-height: 1.8;
+		word-break: keep-all;
+	}
 
 #info-logo{
+	grid-area: info-logo;
 	display: flex;
 		justify-content: flex-end;
 		align-items: center;
+	padding-right: 0px;
 }
 
 	#info-logo > a{
-		height: 130px;
+		height: 100px;
 	}
 	
 	#info-logo img{
@@ -281,42 +296,43 @@ p{
 	}
 	
 #info-1{
-	/* display: flex;
-		justify-content: center;
-		align-items: center;
-	 */
-	padding: 30px;
-	margin: 0;
-	font-size: 13px;
-	color: #808080;
-	font-weight: 600;
-	line-height: 1.8;
+	grid-area: info-1;
+	padding-right: 0px;
 	word-break: keep-all;
+	/* white-space: nowrap; */
 }
-
-
 #info-2{
-	padding: 30px;
-	margin: 0;
-	font-size: 13px;
-	color: #808080;
-	font-weight: 600;
-	line-height: 1.8;
+	grid-area: info-2;
+	padding-right: 0px;
 	word-break: keep-all;
+	/* white-space: nowrap; */
 }
+	.company{
+		text-decoration: none;
+		border-bottom: 1px solid #808080;
+	}
+	.company a{
+		color: #808080;
+	}
+
 
 #info-3{
-	word-break: keep-all;
+	grid-area: info-3;
+	/* word-break: keep-all; */
 }
+	.sns-list{
+		display: flex;
+	}
+	.sns-icon{
+		width: 40px;
+		padding: 5px;
+	}
+	.sns-icon img{
+		max-width: 100%;
+		border-radius: 10px;
+	}
 
-.company{
-	text-decoration: none;
-	border-bottom: 1px solid #808080;
-}
 
-.company a{
-	color: #808080;
-}
 #btTEXT1{
 	display: flex;
 		justify-content: center;
@@ -347,7 +363,7 @@ p{
 @media screen and (min-width: 901px){
 	.grid{
 		display: grid;
-		grid-template-columns: 1fr 500px 500px 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		/* grid-template-rows: repeat(5, 1fr); */
 		grid-auto-rows: minmax(40px, auto);
 		/* grid-column-gap: 2em;
@@ -362,7 +378,9 @@ p{
 	
 	.f-text{
 	display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns:
+			repeat(4,minmax(min-content, max-content)); 
+			
 		
 	grid-template-areas:
 	"info-logo info-1 info-2 info-3";
@@ -391,12 +409,30 @@ p{
 		
 	grid-template-areas:
 	"info-1 info-2"
-	"info-1 info-3";
+	"info-logo info-3";
 	}
+	
+	#info-logo{
+	grid-area: info-logo;
+	display: flex;
+		justify-content: center;
+		align-items: center;
+	padding-top: 0px;
+	}
+	
+	#info-3{
+		padding: 0 30px;
+	}
+	
 }
 
-/* -------------모바일------------- */			
+
+/* -------------------모바일------------------ */	
+/* -------------------모바일------------------ */	
+/* -------------------모바일------------------ */			
 @media screen and (max-width: 540px){
+	
+	
 	/* .grid{
 		display: grid;
 		grid-template-columns: 1fr;
@@ -412,7 +448,7 @@ p{
 		"footer";
 	} */
 	
-	
+/* -------모바일 header------- */	
 	.tb-wrap{
 		display: flex;
 			justify-content: space-between;
@@ -420,30 +456,70 @@ p{
 		width: 100%;
 		
 	}
-			.tb-right > li{
+			.tb-right li,
+			.tb-right a{
+				display: flex;
+					justify-content: center;
+					align-items: center;
+				
 				margin: 0px 10px;
 			}
-			
+			.aside{
+				width: 80%;
+				height: calc(100%-46px);
+				background: #fff;
+				position: fixed;
+				top: 46px;
+				left: -80%;
+				transition: 0.3s;
+				transition-property: left;
+			}
+			.aside.show{
+				left: 0%;
+				box-shadow: 3px 3px 3px #797979;
+			}
 	
 	
 	.logo-bar{
-		position: fixed;
+		position: absolute;
 		top: 40px;
 		/* background: gold; */
 		height: 45px;
 		width: 100%;
 		border-bottom: 1px solid #e9e9e9;
-		
 	}
 	
+/* -------모바일 main------- */	
+
+	.nav-wrap div{
+		margin: 0px 10px;
+	}
+
+	.plc-wrap {
+   /*  margin: auto; */
+    width: 70%;
+}
+
+
+/* -------모바일 footer------- */	
 	.f-text{
 	display: grid;
 		grid-template-columns: 1fr;
 		
-	grid-template-areas:
-		"info-1"
-		"info-2"
-		"info-3";
+		grid-template-areas:
+			"info-1"
+			"info-2"
+			"info-3";
+	}
+	#info-logo{
+		display: none;
+	}
+	#info-1,
+	#info-2{
+		padding-bottom: 0px; 
+	}
+	#btTEXT2{
+		font-size: 11px;
 	}
 }	
 

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.harusketch.dao.ProductDao;
+import com.harusketch.entity.Guest;
 import com.harusketch.entity.Product;
 
 public class ProductService {
@@ -28,5 +29,9 @@ public class ProductService {
 		
 		return null;
 	}
+
+
+
+
 
 }

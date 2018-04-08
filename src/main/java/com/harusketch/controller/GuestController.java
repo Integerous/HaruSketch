@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.harusketch.entity.Guest;
 import com.harusketch.entity.Product;
+import com.harusketch.service.GuestService;
 import com.harusketch.service.ProductService;
 
 @Controller
@@ -19,7 +21,7 @@ public class GuestController {
 	
 	
 	@Autowired //Autowired해서 가져오지않으면 nullpointerexception 발생
-	private ProductService service;
+	private GuestService service;
 	
 	
 	
@@ -29,12 +31,26 @@ public class GuestController {
 		return "guest.login";
 	}
 	
+	
+	
 	/*스프링 시큐리티가 제공하는 처리기를 사용할거라서 여기서는 지운다.
 	@RequestMapping(value="login" , method=RequestMethod.POST)
 	public String login(String id, String pwd) {
 		
 		return "redirect: ../index";
 	}*/
+	@RequestMapping(value="join", method=RequestMethod.GET)
+	public String join() {
+		
+		return "guest.join";
+	}
 
+	@RequestMapping(value="join", method=RequestMethod.POST)
+	public String join(Guest guest) {
+		
+		int result = service.insertGuest(guest);
+		
+		return "redirect: ../index";
+	}
 
 }
