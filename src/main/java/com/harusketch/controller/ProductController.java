@@ -30,7 +30,7 @@ public class ProductController {
 		
 		model.addAttribute("products", products);
 		
-		return "product/list";
+		return "product.list";
 	}
 	
 	/*
@@ -45,7 +45,7 @@ public class ProductController {
 		
 		model.addAttribute("product", product);
 		
-		return "product/detail";
+		return "product.detail";
 	}
 
 }

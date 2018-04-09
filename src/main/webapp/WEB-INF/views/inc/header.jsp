@@ -3,10 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
-
 <!-- ---------------------HEADER---------------------- -->
 	<header class="header">
-		<div class="h-nested">
+		<section class="h-nested">
 			<div class="top-bar">
 				<div class="tb-wrap">
 					<div class="tb-left">
@@ -16,25 +15,23 @@
 							<img src="${ctx}/resources/images/n-logo.png"></a>
 					</div>
 					<ul class="tb-right">
-						<li>Login</li>
-						<li>Join</li>
-						<li>MyPage</li>
-						<li id="ham-btn">
-							<a href=""><img src="${ctx}/resources/images/ham-btn.png"></a>
-						</li>
+						<li class="tbr-web">Login</li>
+						<li class="tbr-web">Join</li>
+						<li class="tbr-web">MyPage</li>
+						<li id="ham-btn"><img src="${ctx}/resources/images/white-hamburg-48.png"></li>
 					</ul>
 				</div>
 			</div>		
 			<div class="logo-bar">
-				<a href="/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
+					<a href="/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</div>			
 			<nav class="nav-bar">
-				<div class="nav-wrap">
-					<div class="products">Product</div>
-					<div class="reviews">Review</div>
-					<div class="order">Order</div>
-					<div class="contact">Contact</div>
-				</div>
+				<ul class="nav-wrap">
+					<li class="products">Product</li>
+					<li class="reviews">Review</li>
+					<li class="order">Order</li>
+					<li class="contact">Contact</li>
+				</ul>
 			</nav>
-		</div>
+		</section>
 	</header>

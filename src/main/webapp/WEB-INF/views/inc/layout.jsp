@@ -17,7 +17,9 @@
 
 
 </head>
+
 <body>
+<!-- <div class="grid"> -->
 	<!-- header -->
 		<tiles:insertAttribute name="header"/>
 	<!-- aside -->
@@ -28,6 +30,6 @@
 		<tiles:insertAttribute name="footer"/>
 	
 	
-
+<!-- </div> -->
 </body>
 </html>
