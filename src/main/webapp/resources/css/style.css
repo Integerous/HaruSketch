@@ -158,93 +158,6 @@ p{
 	display: none;
 }
 /* --------------메인--------------- */
-.main{
-	grid-area: main;
-}
-
-
-.p-list-nested{
-	/* display: grid; */
-}
-
-/* -----list-title----- */
-.p-list-title{
-	display: flex;
-		justify-content: center;
-		align-items: center;	
-	border-top: 3px solid darkolivegreen;
-	height: 150px;
-	background: #00000033;
-
-}
-	.p-list-title > h1{
-		font-size: 24px;
-		font-weight: bold;
-	}
-
-/* -----list-filter----- */
-.p-list-filter{
-	display: flex;
-		justify-content: center;
-		align-items: center;
-	border-bottom: 1px solid #ccc;
-	padding: 30px 0px 10px 0px;
-	
-}
-	.plf-wrap{
-		display: flex;
-			justify-content: flex-start;
-			align-items: center;
-		width: 60%;
-	}
-		.plf-wrap > li{
-			margin: 0px 10px;
-			font-size: 13px;
-		}
-		
-/* -----list-content----- */
-.p-list-content{
-	display: flex;
-		justify-content: center;
-	padding: 30px 0;
-}
-
-.plc-wrap{
-	
-	/* margin:auto; */
-	width: 60%;
-}
-
-.grid-wrap{
-	display: grid;
-		grid-template-columns: 
-		repeat(auto-fill, minmax(200px,auto));
-		/* grid-template-rows: repeat(2, 1fr); */
-		/* grid-auto-row: 238px; */
-		grid-column-gap: 1em;
-		grid-row-gap: 2em;
-	justify-items: center;
-	align-items: center;
-	
-}
-.img-wrap{
-
-}
-.img-wrap img{
-	/* width: 238px;
-	height: 238px; */
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.txt-wrap{
-	
-}
-
-.txt-wrap .item-tag em {
-	font-size: 12px;
-	text-decoration: line-through;
-}
 
 /* --------------풋터--------------- */
 .footer{
@@ -407,9 +320,7 @@ p{
 		width: 80%;
 	}
 /* -------태블릿 main------- */
-	.plc-wrap{
-		/* width: 80%; */
-	}
+
 	
 /* -------태블릿 footer------- */		
 	.f-text{
@@ -489,9 +400,7 @@ p{
 		display: block;
 		z-index: 990;
 		padding-top: 4px;
-	}
-	
-	
+	}	
 	
 	.logo-bar{
 		/* display: flex;
@@ -529,9 +438,6 @@ p{
 			.nav-wrap li{
 				padding: 0px 18px;
 			}
-	
-	
-	
 
 /* -------모바일 aside------- */
 	.aside{
@@ -555,22 +461,7 @@ p{
 		box-shadow: 3px 5px 10px 3px #797979;
 	}
 	
-
-
 /* -------모바일 main------- */	
-	.plc-wrap {
-   /*  margin: auto; */
-    width: 70%;
-	}
-	
-	.p-list-title{
-	border-top: 2px solid darkolivegreen;
-	height: 100px;
-}
-	.p-list-title > h1{
-		font-size: 18px;
-	}
-
 
 /* -------모바일 footer------- */	
 	.f-text{

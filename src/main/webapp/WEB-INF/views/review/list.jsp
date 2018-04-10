@@ -13,7 +13,7 @@
              initial-scale=1, minimum-scale=1, user-scalable=1"/>
 <title>Insert title here</title>
 
-<link href="${ctx}/resources/css/styleProductList.css" type="text/css" rel="stylesheet">
+<link href="${ctx}/resources/css/styleReviewList.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,21 +25,21 @@
 		
 <!-- ------------------메인------------------- -->	
 	<div class="main">
-		<div class="p-list-nested">
-			<div class="p-list-title">
-				<%-- <img src="${ctx}/resources/images/pencils.png"> --%>
-				<h1>판매상품 목록</h1>
+		<section class="r-list-nested">
+			<div class="r-list-title">
+				<h1>고객 구매후기</h1>
 			</div>		
-			<div class="p-list-filter">
-				<ul class="plf-wrap">
-					<li>판매량순</li>
-					<li>최신순</li>
-					<li>할인상품</li>
+			<div class="r-list-filter">
+				<ul class="rlf-wrap">
+					<li>키링</li>
+					<li>폰케이스</li>
+					<li>복주머니</li>
+					<li>반려동물</li>
 				</ul>
 			</div>
-			<div class="p-list-content">
-				<div class="plc-wrap">
-					<ul class="plc-grid">
+			<div class="r-list-content">
+				<div class="rlc-wrap">
+					<ul class="rlc-grid">
 						<li>
 							<div class="img-wrap">
 								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
@@ -151,7 +151,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
 	
 <!-- ------------------풋터------------------- -->	
