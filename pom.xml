@@ -7,24 +7,73 @@
   <name>HaruSketch</name>
   <description>HaruSketch</description>
   
+  
+  	<build>
+  		<plugins>
+  			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <version>2.6</version>
+	            <configuration>
+               <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+         </plugin>
+  		</plugins>
+  	</build>
+  
+  
+  
     <dependencies>
-    <dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>jstl</artifactId>
-		<version>1.2</version>
-	</dependency>
+    
+    
+    
+    
     <dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
 	    <version>3.8.1</version>
 	    <scope>test</scope>
     </dependency>
-	<dependency>
+	
+	<!-- <dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>javax.servlet-api</artifactId>
 	    <version>3.1.0</version>
 	    <scope>provided</scope>
+	</dependency> -->
+	
+	
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat-servlet-api</artifactId>
+	    <version>9.0.7</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api -->
+	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat-jsp-api</artifactId>
+	    <version>9.0.7</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
+	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat-jdbc</artifactId>
+	    <version>9.0.7</version>
+	</dependency>
+	<!-- 여기다 톰캣  3개 가져다놨으니 빌드패스에서 톰캣을 걸지 않겠다. -->
+	
+	
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
@@ -81,6 +130,19 @@
 	    <version>3.0.7</version>
 	</dependency>
 
+	
+	<!-- AOP 추가 -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>5.0.4.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>aopalliance</groupId>
+		<artifactId>aopalliance</artifactId>
+		<version>1.0</version>
+	</dependency>
+	
 
 	 <!-- jsoup 추가 -->
 	<dependency>
@@ -103,11 +165,57 @@
          <version>5.0.3.RELEASE</version>
       </dependency>
 
-      <dependency>
-         <groupId>org.springframework.security</groupId>
-         <artifactId>spring-security-taglibs</artifactId>
-         <version>5.0.3.RELEASE</version>
-      </dependency>
+    <dependency>
+       <groupId>org.springframework.security</groupId>
+       <artifactId>spring-security-taglibs</artifactId>
+       <version>5.0.3.RELEASE</version>
+    </dependency>
+	
+	
+	
+	
+	<!-- Hibernate -->
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.2.16.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-entitymanager</artifactId>
+	    <version>5.2.16.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>5.0.5.RELEASE</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-c3p0</artifactId>
+	    <version>5.2.16.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>0.9.5.2</version>
+	</dependency>
+	
+  	<dependency>
+       <groupId>javax.transaction</groupId>
+       <artifactId>jta</artifactId>
+       <version>1.1</version>
+    </dependency>
+	
 	
 	
 	

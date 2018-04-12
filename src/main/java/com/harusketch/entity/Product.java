@@ -2,35 +2,49 @@ package com.harusketch.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
-	private long id;
+	
+	@Id
+	private int id;
 	private String title;
-	private String writerId;
 	private String content;
 	private Date regDate;
 	private int hit;
-	private int order;
-	private long chapterId;
+
 
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Product(String title, String writerId, String content) {
+	public Product(int id, String title, String content, Date regDate, int hit) {
 		super();
+		this.id = id;
 		this.title = title;
-		this.writerId = writerId;
 		this.content = content;
+		this.regDate = regDate;
+		this.hit = hit;
+	}
+
+	
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", title=" + title + ", content=" + content + ", regDate=" + regDate + ", hit="
+				+ hit + "]";
 	}
 
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -42,16 +56,6 @@ public class Product {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-
-	public String getWriterId() {
-		return writerId;
-	}
-
-
-	public void setWriterId(String writerId) {
-		this.writerId = writerId;
 	}
 
 
@@ -85,25 +89,5 @@ public class Product {
 	}
 
 
-	public int getOrder() {
-		return order;
-	}
-
-
-	public void setOrder(int order) {
-		this.order = order;
-	}
-
-
-	public long getChapterId() {
-		return chapterId;
-	}
-
-
-	public void setChapterId(long chapterId) {
-		this.chapterId = chapterId;
-	}
-	
-	
 	
 }

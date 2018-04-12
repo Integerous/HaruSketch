@@ -4,21 +4,18 @@ import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.harusketch.dao.ProductDao;
 import com.harusketch.entity.Product;
 
+
+@Service("memberProductService")
 public class ProductService {
 	
 	@Autowired
 	private ProductDao productDao;
 
-	public int insertProduct(Product product) {
-		
-		productDao.insert(product);
-		
-		return 0;
-	}
 
 	public List<Product> getProductList(int page) {
 
@@ -33,12 +30,19 @@ public class ProductService {
 			if(text.length()>=250)
 				text = text.substring(0, 249);
 			
-			p.setContent(text);
-				
+			p.setContent(text);	
 		}
 		
 		return list;
 	}
+
+	public int insertProduct(Product product) {
+		
+		productDao.insert(product);
+		
+		return 0;
+	}
+
 
 	public Product getProduct(Integer id) {
 		

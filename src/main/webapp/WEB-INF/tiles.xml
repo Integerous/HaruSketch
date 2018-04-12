@@ -4,19 +4,27 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
- <definition name="home.*" template="/WEB-INF/views/inc/layout.jsp">    
+  <definition name="home.*" template="/WEB-INF/views/inc/layout.jsp">    
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="aside" value="/WEB-INF/views/inc/aside.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/product/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
-  <!-- member 페이지를 위한 타일 추가 -->
-  <definition name="member.*.*" template="/WEB-INF/views/member/inc/layout.jsp">    
+  <!-- member 템플릿 -->
+  <definition name="memberTemplate" template="/WEB-INF/views/member/inc/layout.jsp">    
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="aside" value="/WEB-INF/views/inc/aside.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/member/{1}/{2}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+  <definition name="member.*" extends="memberTemplate">    
+	<put-attribute name="main" value="/WEB-INF/views/member/{1}.jsp" />
+  </definition>
+  
+  <definition name="member.*.*" extends="memberTemplate">    
+    <put-attribute name="main" value="/WEB-INF/views/member/{1}/{2}.jsp" />
   </definition>
   
   <definition name="*.*" template="/WEB-INF/views/inc/layout.jsp">    

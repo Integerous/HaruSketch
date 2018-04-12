@@ -1,22 +1,36 @@
-package com.harusketch.entity;
+package com.harusketch.entity.member;
 
-public class Guest {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Member {
+	
+	@Id
 	private String id;
 	private String pwd;
 	private String name;
 	private String photo;
 	
-	public Guest() {
+	public Member() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public Guest(String id, String pwd, String name, String photo) {
+	public Member(String id, String pwd, String name, String photo) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
 		this.photo = photo;
+	}
+
+	
+	
+
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", photo=" + photo + "]";
 	}
 
 

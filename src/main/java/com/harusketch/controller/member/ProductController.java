@@ -30,9 +30,9 @@ public class ProductController {
 	
 	
 	@RequestMapping("list")
-	public String list(Model model) {
+	public String list(Integer page, Model model) {
 		
-		List<Product> list = service.getProductList(1);
+		List<Product> list = service.getProductList(page);
 		
 		model.addAttribute("products", list);
 		

@@ -38,7 +38,10 @@ public class ProductController {
 	 * http://www.notepubs.com/note/1 >> param으로 id를 못읽는다.
 	 */
 	
-	@RequestMapping("{id}")
+	@RequestMapping("{id}")//일일이 다 1 2 3 4 설정할 수 없으니까 -> 
+	   //파라미터로 id가 올 수 있는데 -> param으로 못읽는 id를 pathVariable을 통해 경로 전달
+	   //그것을 잡는게 아니라 경로로 잡는다!
+	   //pathVariable -> 경로에 대한 정보?!
 	public String detail(@PathVariable("id") Integer id, Model model) { //파라미터로 오는 id가 아니라 경로로 오는 id 받기위해
 	
 		Product product = service.getProduct(id);
