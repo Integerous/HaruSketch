@@ -10,8 +10,10 @@ public class HarusketchDispatcherServletInitializer
 
    @Override
    protected Class<?>[] getRootConfigClasses() {
-      // TODO Auto-generated method stub
-      return null;
+
+	   return new Class[] {
+			   HarusketchSecurityConfig.class
+	   };
    }
 
    @Override

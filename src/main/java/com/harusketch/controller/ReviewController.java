@@ -9,16 +9,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.harusketch.entity.Product;
-import com.harusketch.service.ProductService;
+import com.harusketch.entity.Review;
+import com.harusketch.service.ReviewService;
+
+
 
 @Controller
-@RequestMapping("/product/")
-public class ProductController {
+@RequestMapping("/review/")
+public class ReviewController {
 	
 	
 	@Autowired //Autowired해서 가져오지않으면 nullpointerexception 발생
-	private ProductService service;
+	private ReviewService service;
 	
 	
 	
@@ -26,11 +28,11 @@ public class ProductController {
 	public String list(@RequestParam(value="p", defaultValue="1") Integer page, Model model) {
 		//String page = request.getParameter("p"); //이렇게 사용하던 것을 파라미터에 선언만 하면 됌.
 		
-		/*List<Product> products = service.getProductList(page);
+		/*List<Review> reviews = service.getReviewList(page);
 		
-		model.addAttribute("products", products);*/
+		model.addAttribute("reviews", reviews);*/
 		
-		return "product.list";
+		return "review.list";
 	}
 	
 	/*
@@ -44,11 +46,11 @@ public class ProductController {
 	   //pathVariable -> 경로에 대한 정보?!
 	public String detail(@PathVariable("id") Integer id, Model model) { //파라미터로 오는 id가 아니라 경로로 오는 id 받기위해
 	
-		Product product = service.getProduct(id);
+		Review review = service.getReview(id);
 		
-		model.addAttribute("product", product);
+		model.addAttribute("review", review);
 		
-		return "product.detail";
+		return "review.detail";
 	}
 
 }

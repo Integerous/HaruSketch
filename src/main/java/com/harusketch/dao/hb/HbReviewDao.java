@@ -12,7 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.harusketch.dao.ProductDao;
+import com.harusketch.dao.ReviewDao;
 import com.harusketch.entity.Product;
+import com.harusketch.entity.Review;
 
 
 
@@ -20,36 +22,36 @@ import com.harusketch.entity.Product;
 
 
 @Repository//Dao라는 의미?
-public class HbProductDao implements ProductDao {
+public class HbReviewDao implements ReviewDao {
    
    @Autowired
    private SessionFactory sessionFactory;
    
    @Transactional
    @Override
-   public List<Product> getList(Integer page) {
+   public List<Review> getList(Integer page) {
       
       //session 팩토리에서 꺼내오기!
       Session session = sessionFactory.getCurrentSession(); 
-      Query<Product> query = session.createQuery("from Product");
-      List<Product> list = query.getResultList();
+      Query<Review> query = session.createQuery("from Review");
+      List<Review> list = query.getResultList();
       
       return list;
    }
    
    @Transactional
    @Override
-   public Product get(Integer id) {
+   public Review get(Integer id) {
       Session session = sessionFactory.getCurrentSession();
       
-      Product product = session.get(Product.class, id);
+      Review review = session.get(Review.class, id);
       
-      return product;
+      return review;
    }
    
    @Transactional
    @Override
-   public int insert(Product product) {
+   public int insert(Review review) {
       
       return 0;
    }

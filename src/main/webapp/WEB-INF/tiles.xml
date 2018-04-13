@@ -19,13 +19,14 @@
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
+  <definition name="member.*.*" extends="memberTemplate">    
+    <put-attribute name="main" value="/WEB-INF/views/member/{1}/{2}.jsp" />
+  </definition>
+  
   <definition name="member.*" extends="memberTemplate">    
 	<put-attribute name="main" value="/WEB-INF/views/member/{1}.jsp" />
   </definition>
   
-  <definition name="member.*.*" extends="memberTemplate">    
-    <put-attribute name="main" value="/WEB-INF/views/member/{1}/{2}.jsp" />
-  </definition>
   
   <definition name="*.*" template="/WEB-INF/views/inc/layout.jsp">    
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />

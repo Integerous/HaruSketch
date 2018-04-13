@@ -6,7 +6,7 @@
 <main>
 	<section>
 		<h1>로그인 폼</h1>
-		<form action="${root}/login" method="post">
+		<form <%-- action="${root}/login" --%> method="post">
 			<fieldset>
 				<legend>로그인 필드</legend>
 				<table>

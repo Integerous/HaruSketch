@@ -1,4 +1,4 @@
-package com.harusketch.entity.member;
+package com.harusketch.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

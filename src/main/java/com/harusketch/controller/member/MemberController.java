@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.harusketch.entity.member.Member;
+import com.harusketch.entity.Member;
 import com.harusketch.service.MemberService;
 
 @Controller("memberController")
@@ -21,14 +21,20 @@ public class MemberController {
 	private MemberService service;
 	
 	
-	
-	//@RequestMapping(value="login" , method=RequestMethod.GET)
-	@GetMapping("join")
+	@GetMapping("login")
 	public String login() {
 		
 		return "member.login";
 	}
 	
+	
+	
+	//@RequestMapping(value="login" , method=RequestMethod.GET)
+	@GetMapping("join")
+	public String join() {
+		
+		return "member.join";
+	}
 	
 	
 	/*스프링 시큐리티가 제공하는 처리기를 사용할거라서 여기서는 지운다.

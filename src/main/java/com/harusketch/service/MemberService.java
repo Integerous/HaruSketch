@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.harusketch.dao.MemberDao;
-import com.harusketch.entity.member.Member;
+import com.harusketch.entity.Member;
 
 @Service
 public class MemberService {

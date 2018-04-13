@@ -1,6 +1,6 @@
 package com.harusketch.dao;
 
-import com.harusketch.entity.member.Member;
+import com.harusketch.entity.Member;
 
 public interface MemberDao {
 
