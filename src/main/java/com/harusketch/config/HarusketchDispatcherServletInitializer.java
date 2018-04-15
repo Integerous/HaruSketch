@@ -49,7 +49,7 @@ public class HarusketchDispatcherServletInitializer
 	   
 	   
       return new Filter[] {
-    		  charaterEncodingFilter() 
+    		  charaterEncodingFilter()
       };
    }
    

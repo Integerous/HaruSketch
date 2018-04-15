@@ -19,6 +19,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
       @ComponentScan("com.harusketch.dao.hb"),
       @ComponentScan("com.harusketch.service")
 })
+
+
 public class HibernateConfig {
    
    

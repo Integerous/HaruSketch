@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.harusketch.entity.Product;
 import com.harusketch.service.member.ProductService;
 
-@Controller("MemberProductController")
+@Controller("memberProductController")
 @RequestMapping("/member/product/")
 public class ProductController {
 	

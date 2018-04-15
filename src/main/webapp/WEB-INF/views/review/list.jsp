@@ -40,114 +40,79 @@
 			<div class="r-list-content">
 				<div class="rlc-wrap">
 					<ul class="rlc-grid">
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">선물용 복주머니 캐리커쳐</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/keyring1.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 키링</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/dog1.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">반려동물 디자인</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/keyring2.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 키링</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/phonecase2.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 폰케이스</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/keyring3.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 키링</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/bok2.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">선물용 복주머니 캐리커쳐</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/phonecase3.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 폰케이스</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/keyring4.png"></a>
-							</div>
-							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 키링</a>
-								<div class="item-tag">
-									<b>15,000원</b>
-									<em>18,000원</em>
-								</div>
-							</div>
-						</li>
+						<%-- <c:forEach var="note" items="${notes}"> --%>
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<a href="">
+												<img src="${ctx}/resources/images/bok1.png">
+											</a>
+										</div>
+										<div class="txt-wrap">
+											<div class="text ellipsis">
+												<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<a href="">
+												<img src="${ctx}/resources/images/bok1.png">
+											</a>
+										</div>
+										<div class="txt-wrap">
+											<div class="text ellipsis">
+												<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+						<%-- </c:forEach> --%>
 					</ul>
 				</div>
 			</div>
