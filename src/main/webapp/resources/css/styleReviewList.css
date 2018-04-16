@@ -1,7 +1,14 @@
 @charset "UTF-8";
 
 /* ----tag style reset--------------------------------- */
-
+* {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    /* -webkit-box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    /* line-height: inherit; */
+}
 -------------------------------------------------------						
 
 /* --------------헤더--------------- */
@@ -48,7 +55,7 @@
 	}
 		.rlf-wrap > li{
 			margin: 0px 10px;
-			font-size: 13px;
+			font-size: 15px;
 		}
 		
 /* -----list-content----- */
@@ -82,25 +89,28 @@
 			flex-direction: column;
 		border-bottom: 1px solid #ccc;
 		padding-bottom: 20px;
-		
-		
 	}
 	
 		.r-rating-name-date {
 			display: flex;
 				justify-content: space-between;
-			border: 1px solid blue;
-		}	
+			/* border: 1px solid blue; */
+		}
+		.ui-date{
+			color: #999;
+			font-size: 12px;
+		}
 
 		.r-img-text{
 			display: flex;
-			border: 1px solid yellow;
+			margin-top: 10px;
+			/* border: 1px solid red; */
 		}
 
 .img-wrap{
-	border: 1px solid green;
-	min-width: 100px;
-	height: 100px;
+	flex: auto;
+	/* min-width: 100px; */
+	/* border: 1px solid green; */
 	margin-right: 10px;
 }
 
@@ -113,48 +123,67 @@
 	}
 
 .txt-wrap{
-	
+	flex: 1;
+	padding: 0 15px;
 }
 
 	.text-concat {
-	           position: relative;
-	           display: inline-block;
+	           /* position: relative; */
+	           /* display: inline-block; */
+	           display: -webkit-box;
 	           word-wrap: break-word;
 	           overflow: hidden;
-	           max-height: 63px; /* (Number of lines you want visible) * (line-height) */
-	           line-height: 1.2em;
-	           text-align:justify;
-	           font-size: 14px;
+	           /* max-height: 6.5em; */ /* (Number of lines you want visible) * (line-height) */
+	           line-height: 1.3em;
+	           text-align: justify;
+	           font-size: 16px;
+	           -webkit-line-clamp: 5;
+	           -webkit-box-orient: vertical;
+	           text-overflow: ellipsis;
 	         }
 	         
-	         .text.ellipsis::after {
+	         /* .text.ellipsis::after {
 	           content: "...";
 	           position: absolute;
 	           right: -12px; 
 	           bottom: 4px;
-	         }
+	         } */
 
 /* --------------풋터--------------- */
 
 
 /* --------------데스크탑--------------- */
 @media screen and (min-width: 901px){
-	.grid{
+	/* .grid{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		/* grid-template-rows: repeat(5, 1fr); */
+		grid-template-rows: repeat(5, 1fr);
 		grid-auto-rows: minmax(40px, auto);
-		/* grid-column-gap: 2em;
-		grid-row-gap: 2em; */
+		grid-column-gap: 2em;
+		grid-row-gap: 2em;
 
 		
 		grid-template-areas:
 		"header header header header"
-		"main main main main"
+		". main main ."
 		"footer footer footer footer";
+	} */
+	
+	.img-wrap{
+		flex: 1;
+		/* width: 250px;
+		height: 250px; */
+		/* border: 1px solid green; */
+		margin-right: 10px;
 	}
 	
-/* -------데스크탑 footer------- */		
+	.txt-wrap{
+		flex: 5;
+	}
+	
+	.text-concat {
+	     
+	         }		
 	
 }	
 
@@ -168,9 +197,29 @@
 /* -------태블릿 header------- */	
 
 /* -------태블릿 main------- */
-	.plc-wrap{
-		/* width: 80%; */
+	
+	.rlf-wrap > li{
+			font-size: 14px;
+		}
+	
+	
+	.img-wrap{
+		flex: 1;
+		/* width: 250px;
+		height: 250px; */
+		/* border: 1px solid green; */
+		margin-right: 10px;
 	}
+	
+	.txt-wrap{
+		flex: 4;
+		padding: 0 10px;
+	}
+	
+	.text-concat {
+		font-size: 14px;
+		-webkit-line-clamp: 4;
+	         }		
 	
 /* -------태블릿 footer------- */		
 
@@ -187,18 +236,70 @@
 /* -------모바일 aside------- */
 
 /* -------모바일 main------- */	
-	.plc-wrap {
-   /*  margin: auto; */
-    width: 70%;
+	.r-list-title{
+		height: 70px;
+		
+	}
+		.r-list-title > h1{
+			font-size: 18px;
+		}
+	
+	
+	.rlf-wrap{
+		display: flex;
+			justify-content: space-between;
+			align-items: center;
+		width: 80%;
+	}
+		.rlf-wrap > li{
+			margin: 0px 10px;
+			font-size: 14px;
+		}
+	
+	.r-list-filter{
+	display: flex;
+		justify-content: center;
+		align-items: center;
+	border-bottom: 1px solid #ccc;
+	padding: 30px 0px 10px 0px;
+	
 	}
 	
-	.p-list-title{
-	border-top: 2px solid darkolivegreen;
-	height: 100px;
-}
-	.p-list-title > h1{
-		font-size: 18px;
+	
+	.rlc-wrap{
+		width: 90%;
 	}
+	
+	.rlc-grid li{
+		padding-bottom: 15px;
+	}
+	
+	
+	.img-wrap{
+		flex: 1;
+		/* width: 250px;
+		height: 250px; */
+		/* border: 1px solid green; */
+		margin-right: 10px;
+	}
+	
+	.txt-wrap{
+		flex: 3;
+		padding: 0;
+	}
+	
+	.text-concat {
+	           display: -webkit-box;
+	           word-wrap: break-word;
+	           overflow: hidden;
+	           /* max-height: 5.2em; */ /* (Number of lines you want visible) * (line-height) */
+	           line-height: 1.3em;
+	           text-align:justify;
+	           font-size: 14px;
+	           -webkit-line-clamp: 4;
+	           -webkit-box-orient: vertical;
+	           text-overflow: ellipsis;
+	         }		
 
 /* -------모바일 footer------- */	
 
