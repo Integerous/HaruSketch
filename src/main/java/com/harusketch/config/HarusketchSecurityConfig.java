@@ -1,5 +1,9 @@
 package com.harusketch.config;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -7,11 +11,23 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity //얘는 보안설정이다
+@ComponentScan(basePackages="com.harusketch.config")
 public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 
+	
+	@Autowired
+	private DataSource dataSource;
+	
+	@Autowired
+	private AuthenticationSuccessHandler successHandler;
+	
+	
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 	
@@ -20,14 +36,16 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			.csrf().disable()
 			.authorizeRequests()
 			/*------------------------------------*/
-			
+			/*.antMatchers("/member/join").anonymous()*/
 			.antMatchers("/member/**").hasRole("MEMBER")
+			.antMatchers("/admin/**").hasRole("ADMIN")
 			
 			/*------------------------------------*/
 			.and()
 		.formLogin()
 			.loginPage("/member/login")
 			.loginProcessingUrl("/member/login")
+			.successHandler(successHandler)
 			.permitAll()
 			.and()
 		.logout()
@@ -55,10 +73,19 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			
 			/*UserBuilder users = User.withDefaultPasswordEncoder();*/
 			UserBuilder users = User.builder();
+			
+			
+			auth
+			.jdbcAuthentication()
+			.dataSource(dataSource)
+			.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
+			.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
+			.passwordEncoder(new BCryptPasswordEncoder());
 		
-			auth.inMemoryAuthentication()
+			/*.inMemoryAuthentication()
 			.withUser(users.username("newlec").password("{noop}111").roles("AUTHOR"))
-			.withUser(users.username("dragon").password("{noop}123").roles("AUTHOR"));
+			.withUser(users.username("dragon").password("{noop}123").roles("AUTHOR"));*/
+			
 		}
 	
 	

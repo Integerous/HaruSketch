@@ -11,7 +11,8 @@ public class HarusketchDispatcherServletInitializer
    @Override
    protected Class<?>[] getRootConfigClasses() {
 
-	   return new Class[] {
+	   return new Class[] { //서비스는 여기에
+			   HibernateConfig.class,
 			   HarusketchSecurityConfig.class
 	   };
    }
@@ -19,11 +20,10 @@ public class HarusketchDispatcherServletInitializer
    @Override
    protected Class<?>[] getServletConfigClasses() {
       
-      return new Class[] {
+      return new Class[] { //서블릿은 여기에
          ServletContextConfig.class,
          HarusketchMvcConfigurer.class,
          /*NotepubsSecurityConfig.class,*/
-         HibernateConfig.class,
          TilesConfig.class
          };
       }
