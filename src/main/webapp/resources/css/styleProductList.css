@@ -1,7 +1,14 @@
 @charset "UTF-8";
 
 /* ----tag style reset--------------------------------- */
-
+* {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    /* -webkit-box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    /* line-height: inherit; */
+}
 -------------------------------------------------------						
 
 /* --------------헤더--------------- */
@@ -147,7 +154,19 @@
 
 /* -------모바일 aside------- */
 
-/* -------모바일 main------- */	
+/* -------모바일 main------- */
+	
+	.plf-wrap{
+		display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		width: 90%;
+	}
+		.plf-wrap > li{
+			margin: 0px 10px;
+			font-size: 14px;
+		}
+		
 	.plc-wrap {
    /*  margin: auto; */
     width: 70%;

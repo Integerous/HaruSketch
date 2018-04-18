@@ -44,9 +44,9 @@ public class ProductController {
 	   //pathVariable -> 경로에 대한 정보?!
 	public String detail(@PathVariable("id") Integer id, Model model) { //파라미터로 오는 id가 아니라 경로로 오는 id 받기위해
 	
-		Product product = service.getProduct(id);
+		/*Product product = service.getProduct(id);
 		
-		model.addAttribute("product", product);
+		model.addAttribute("product", product);*/
 		
 		return "product.detail";
 	}

@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
     
-<main>
+<main class="main">
   <section>
     <h1>회원가입 폼</h1>
     <form method="post">

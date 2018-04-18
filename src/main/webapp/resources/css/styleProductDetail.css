@@ -1,34 +1,76 @@
 @charset "UTF-8";
 
 /* ----tag style reset--------------------------------- */
-
+* {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    /* -webkit-box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    /* line-height: inherit; */
+}
 -------------------------------------------------------						
 
 /* --------------헤더--------------- */
 
 /* --------------메인--------------- */
 .main{
-	grid-area: ;
+	grid-area: main;
 }
+
+.p-detail-nested{
+	display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	padding-top: 30px;
+	border-top: 3px solid darkolivegreen;
+}
+
+	.p-detail-upper{
+		display: flex;
+			justify-content: center;
+		width: 80%;
+		border: 1px solid red;
+	}
+	
+		.pics-wrap{
+			flex: 1;
+			border: 2px solid green;
+		}
+			.outer-frame img{
+				max-width: 100%;
+			}	
+		
+		.info-wrap{
+			flex: 1;
+			margin-left: 30px;
+			border: 3px solid blue;
+		}
+
+	.p-detail-lower{
+		border: 1px solid red;
+	}
+
 
 /* --------------풋터--------------- */
 
 
 /* --------------데스크탑--------------- */
 @media screen and (min-width: 901px){
-	.grid{
+	/* .grid{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		/* grid-template-rows: repeat(5, 1fr); */
+		grid-template-rows: repeat(5, 1fr);
 		grid-auto-rows: minmax(40px, auto);
-		/* grid-column-gap: 2em;
-		grid-row-gap: 2em; */
+		grid-column-gap: 2em;
+		grid-row-gap: 2em;
 
 		
 		grid-template-areas:
 		"header header header header"
 		"main main main main"
-		"footer footer footer footer";
+		"footer footer footer footer"; */
 	}
 	
 /* -------데스크탑 footer------- */		

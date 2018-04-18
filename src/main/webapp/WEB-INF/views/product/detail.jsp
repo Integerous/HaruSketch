@@ -20,18 +20,20 @@
 	<main class="main">
 		<section class="p-detail-nested">
 			<div class="p-detail-upper">
-				<div class="pics-wrap">사진 부분
-					<div class="outer-frame">큰사진</div>
+				<section class="pics-wrap">사진 부분
+					<div class="outer-frame">
+						<img src="${ctx}/resources/images/bok1.png">
+					</div>
 					<div class="ui-control">ui컨트롤</div>
-				</div>
-				<div class="info-wrap">제목 가격 옵션 부분
-					<div class="title-info"></div>
-					<div class="price-info"></div>
-					<div class="etc-info"></div>
-					<div class="moveable-ui">정은짱
+				</section>
+				<section class="info-wrap">
+					<h1>캐리커쳐 복주머니</h1>
+					<div class="price-info">가격</div>
+					<div class="etc-info">기타정보</div>
+					<div class="moveable-ui">
 						여기에 옵션/총가격/구매하기+문의하기 버튼 넣기
 					</div>
-				</div>
+				</section>
 			</div>
 			<div class="p-detail-lower">
 				<div>정보</div>

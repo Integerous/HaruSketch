@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
 
-<main>
+<main class="main">
 	<section>
 		<h1>로그인 폼</h1>
 		<form <%-- action="${root}/login" --%> method="post">
@@ -28,3 +28,27 @@
 		</form>
 	</section>
 </main>
+
+
+<script>
+	
+	window.addEventListener("load",function(event){
+
+		var hamButton = document.querySelector("#ham-btn");
+		var aside = document.querySelector(".aside");
+		
+		hamButton.onclick = function(e){
+
+			if(aside.classList.contains("show"))
+				aside.classList.remove("show");
+			
+			else
+				aside.classList.add("show")
+				
+			
+			e.preventDefault();
+		};
+
+	});
+	
+</script>

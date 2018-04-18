@@ -15,22 +15,52 @@
 							<img src="${ctx}/resources/images/n-logo.png"></a>
 					</div>
 					<ul class="tb-right">
-						<li class="tbr-web">Login</li>
-						<li class="tbr-web">Join</li>
-						<li class="tbr-web">MyPage</li>
+						
+						<c:if test="${not empty sessionScope.id}">
+							<li class="tbr-web">
+								<a href="${ctx}/logout">Logout</a>
+							</li>
+						</c:if>
+						
+						<c:if test="${empty sessionScope.id}">
+							<li class="tbr-web">
+								<a href="${ctx}/member/login">Login</a>
+							</li>
+						</c:if>
+						
+						<c:if test="${empty sessionScope.id}">
+							<li class="tbr-web">
+								<a href="${ctx}/member/join">Join</a>
+							</li>
+						</c:if>
+						
+						<c:if test="${not empty sessionScope.id}">
+						<li class="tbr-web">
+							<a href="">MyOrder</a>
+						</li>
+						</c:if>
+						
 						<li id="ham-btn"><img src="${ctx}/resources/images/white-hamburg-48.png"></li>
 					</ul>
 				</div>
 			</div>		
 			<div class="logo-bar">
-					<a href="/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
+					<a href="${ctx}/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</div>			
 			<nav class="nav-bar">
 				<ul class="nav-wrap">
-					<li class="products">Product</li>
-					<li class="reviews">Review</li>
-					<li class="order">Order</li>
-					<li class="contact">Contact</li>
+					<li class="about">
+						<a href="${ctx}/about">About</a>
+					</li>
+					<li class="product">
+						<a href="${ctx}/product/list">Product</a>
+					</li>
+					<li class="review">
+						<a href="${ctx}/review/list">Review</a>
+					</li>
+					<li class="contact">
+						<a href="${ctx}/contat">Contact</a>
+					</li>
 				</ul>
 			</nav>
 		</section>

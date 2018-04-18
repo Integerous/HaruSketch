@@ -76,15 +76,15 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			
 			
 			auth
-			.jdbcAuthentication()
+			/*.jdbcAuthentication()
 			.dataSource(dataSource)
 			.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
 			.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
-			.passwordEncoder(new BCryptPasswordEncoder());
+			.passwordEncoder(new BCryptPasswordEncoder());*/
 		
-			/*.inMemoryAuthentication()
-			.withUser(users.username("newlec").password("{noop}111").roles("AUTHOR"))
-			.withUser(users.username("dragon").password("{noop}123").roles("AUTHOR"));*/
+			.inMemoryAuthentication()
+			.withUser(users.username("newlec").password("{noop}111").roles("MEMBER"))
+			.withUser(users.username("dragon").password("{noop}111").roles("ADMIN"));
 			
 		}
 	
