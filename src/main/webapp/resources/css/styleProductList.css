@@ -5,8 +5,8 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    /* -webkit-box-sizing: border-box; */
-    /* box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box;
+    box-sizing: border-box; */
     /* line-height: inherit; */
 }
 -------------------------------------------------------						
@@ -81,8 +81,10 @@
 		grid-row-gap: 2em;
 	justify-items: center;
 	align-items: center;
-	
 }
+	.plc-grid li{
+		
+	}
 .img-wrap{
 
 }

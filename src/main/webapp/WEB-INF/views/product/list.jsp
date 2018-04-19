@@ -46,10 +46,10 @@
 					<ul class="plc-grid">
 						<li>
 							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/bok1.png"></a>
+								<a href="${ctx}/product/1"><img src="${ctx}/resources/images/bok1.png"></a>
 							</div>
 							<div class="txt-wrap">
-								<a href="" class="item-title">선물용 복주머니 캐리커쳐</a>
+								<a href="${ctx}/product/1" class="item-title">선물용 복주머니 캐리커쳐</a>
 								<div class="item-tag">
 									<b>15,000원</b>
 									<em>18,000원</em>

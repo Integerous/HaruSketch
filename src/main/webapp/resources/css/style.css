@@ -19,6 +19,8 @@ body{
 	border: 1px solid blue; */
 	margin: 0px;
 	height: 100%;
+	font-family: 'Nanum Barun Gothic', sans-serif;
+
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -86,7 +88,7 @@ p{
 	display: flex;
 		justify-content: space-between;
 		align-items: center;
-	width: 60%;
+	width: 1056px;
 }
 	.tb-left{
 		display: flex;
@@ -481,6 +483,7 @@ p{
 	.aside.show{
 		right: 0;
 		box-shadow: 3px 5px 10px 3px #797979;
+		/* background: rgba(0,0,0,0.3); */
 	}
 	
 /* -------모바일 main------- */	

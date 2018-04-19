@@ -20,7 +20,7 @@
 	<main class="main">
 		<section class="p-detail-nested">
 			<div class="p-detail-upper">
-				<section class="pics-wrap">사진 부분
+				<section class="pics-wrap">
 					<div class="outer-frame">
 						<img src="${ctx}/resources/images/bok1.png">
 					</div>
@@ -28,11 +28,29 @@
 				</section>
 				<section class="info-wrap">
 					<h1>캐리커쳐 복주머니</h1>
-					<div class="price-info">가격</div>
-					<div class="etc-info">기타정보</div>
-					<div class="moveable-ui">
-						여기에 옵션/총가격/구매하기+문의하기 버튼 넣기
+					<div class="price-info">
+						<span>[30%]</span>
+						<span>
+							<em class="sold-price" data-sold-price="12,000">12,000</em>
+							원
+						</span>
+						<span class="txt-cross">20,000원</span>
 					</div>
+					<div class="etc-info">
+						<ul>
+							<li>남은 수량 : <span>주문시 제작</span></li>
+							<li>배송비 : <span>3000원</span>
+								<em>(30,000원 이상 배송비 무료)</em></li>
+							<li>제작 및 발송기한 : <span>10일 이내</span></li>
+							<li>제주 / 도서산간 추가비용 : <span>3000원</span></li>
+						</ul>
+					</div>
+					<form class="option-form" data-ui="option-selector" method="post">
+						<strong class="txt-title">옵션 선택</strong>
+						<ul class="option-select">
+							<li>
+						</ul>
+					</form>
 				</section>
 			</div>
 			<div class="p-detail-lower">
