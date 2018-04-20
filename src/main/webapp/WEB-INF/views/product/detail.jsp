@@ -46,10 +46,44 @@
 						</ul>
 					</div>
 					<form class="option-form" data-ui="option-selector" method="post">
-						<strong class="txt-title">옵션 선택</strong>
-						<ul class="option-select">
-							<li>
-						</ul>
+						<div class="ui-top">
+							<strong class="txt-title">옵션 선택</strong>
+							<ul class="option-select">
+								<li class="ui-selectbox" data-ui="selectbox" data-disabled="false">
+									<button type="button" class="ui-trigger">
+										<div class="ui-selected">종류</div>
+									</button>
+								    <select class="" name="">
+								      <option disabled selected>종류 선택</option>
+								      <option>옵션1</option>
+								      <option>옵션2</option>
+								      <option>옵션3</option>
+								      <option>옵션4</option>
+								      <option>옵션5</option>
+								    </select>
+								</li>
+							</ul>
+						</div>
+						<div class="ui-bottom">
+							<span class="price-total">
+								<span>총 작품금액</span>
+								<strong>12,000</strong>
+								<em>원</em>
+							</span>
+							<fieldset class="btn-control">
+								<div class="alert-msg">
+									<button type="button" class="" data-product-uuid="" 
+											data-endpoint="/w/cart/add">
+											장바구니 담기</button>
+									<button type="submit" class="" data-product-uuid="" 
+											data-endpoint="/w/cart/bucket-add" data-type="payment">
+											구매하기</button>
+								</div>
+								<div class="btn-askus">
+									<a href="">메세지로 문의</a>
+								</div>
+							</fieldset>
+						</div>
 					</form>
 				</section>
 			</div>
