@@ -114,7 +114,61 @@ em{
 				color: #999;
 			}
 		.
-		
+
+	.price-total{
+		text-align: right;
+		padding: 15px 15px 0px;
+	}
+		.price-total strong{
+			font-size: 16px;
+			font-weight: bold;
+			color: #333;
+			
+		}
+
+fieldset{
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+	.btn-control{
+		margin-top: 24px;
+	}
+
+button{
+	border: 0 none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 0;
+}
+	.alert-msg{
+		display: flex;
+		justify-content: flex-start;
+	}
+	.detail-btn{
+		/* width: 150px; */
+		height: 50px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+		.basket-btn{
+			/* flex: 1; */
+			background: #fff;
+			border: 1px solid #dd5850;
+			color: #dd5850;
+		}
+		.buy-btn{
+			flex: 1.5;
+			background: #dd5850;
+			color: #fff;
+			margin: 0 10px;
+		}
+		.askus-btn{
+			/* flex: 1; */
+			border: 1px solid #999;
+			color: #999;
+		}
 
 .p-detail-lower{
 	margin-top : 30px;

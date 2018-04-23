@@ -72,15 +72,15 @@
 							</span>
 							<fieldset class="btn-control">
 								<div class="alert-msg">
-									<button type="button" class="" data-product-uuid="" 
+									<button type="button" class="detail-btn basket-btn" data-product-uuid="" 
 											data-endpoint="/w/cart/add">
 											장바구니 담기</button>
-									<button type="submit" class="" data-product-uuid="" 
+									<button type="submit" class="detail-btn buy-btn" data-product-uuid="" 
 											data-endpoint="/w/cart/bucket-add" data-type="payment">
 											구매하기</button>
-								</div>
-								<div class="btn-askus">
-									<a href="">메세지로 문의</a>
+									<button class="detail-btn askus-btn">
+										<a href="">메세지로 문의</a>
+									</button>
 								</div>
 							</fieldset>
 						</div>
