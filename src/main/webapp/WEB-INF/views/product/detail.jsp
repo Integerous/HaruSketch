@@ -13,8 +13,16 @@
              initial-scale=1, minimum-scale=1, user-scalable=1"/>
 <title>Insert title here</title>
 
+
+<!-- -----CSS----- -->
 <link href="${ctx}/resources/css/styleProductDetail.css" type="text/css" rel="stylesheet">
 
+
+<!-- -----JQuery & JavaScript ----- -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="${ctx}/resources/js/productDetail.js"></script>
+
+ 
 </head>
 <body>
 	<main class="main">
@@ -24,7 +32,9 @@
 					<div class="outer-frame">
 						<img src="${ctx}/resources/images/bok1.png">
 					</div>
-					<div class="ui-control">ui컨트롤</div>
+					<div class="ui-control">ui컨트</div>
+					
+					
 				</section>
 				<section class="info-wrap">
 					<h1>캐리커쳐 복주머니</h1>
@@ -50,11 +60,37 @@
 							<strong class="txt-title">옵션 선택</strong>
 							<ul class="option-select">
 								<li class="ui-selectbox" data-ui="selectbox" data-disabled="false">
-									<button type="button" class="ui-trigger">
+									<!-- <button type="button" class="ui-trigger">
 										<div class="ui-selected">종류</div>
-									</button>
+									</button> -->
 								    <select class="" name="">
-								      <option disabled selected>종류 선택</option>
+								      <option disabled selected="selected">종류 선택</option>
+								      <option>옵션1</option>
+								      <option>옵션2</option>
+								      <option>옵션3</option>
+								      <option>옵션4</option>
+								      <option>옵션5</option>
+								    </select>
+								</li>
+								<li class="ui-selectbox" data-ui="selectbox" data-disabled="false">
+									<!-- <button type="button" class="ui-trigger">
+										<div class="ui-selected">종류</div>
+									</button> -->
+								    <select class="" name="">
+								      <option disabled selected="selected">종류 선택</option>
+								      <option>옵션1</option>
+								      <option>옵션2</option>
+								      <option>옵션3</option>
+								      <option>옵션4</option>
+								      <option>옵션5</option>
+								    </select>
+								</li>
+								<li class="ui-selectbox" data-ui="selectbox" data-disabled="false">
+									<!-- <button type="button" class="ui-trigger">
+										<div class="ui-selected">종류</div>
+									</button> -->
+								    <select class="" name="">
+								      <option disabled selected="selected">종류 선택</option>
 								      <option>옵션1</option>
 								      <option>옵션2</option>
 								      <option>옵션3</option>
@@ -88,6 +124,17 @@
 				</section>
 			</div>
 			<div class="p-detail-lower">
+				<nav class="pdl-control">
+					<a href="pdl-spec" data-scrol-top="965">
+						작품정보
+					</a>
+					<a href="pdl-info" data-scrol-top="965">
+						배송/교환/환불
+					</a>
+					<a href="pdl-cmt" data-scrol-top="965">
+						댓글
+					</a>
+				</nav>
 				<div>정보</div>
 				<div>후기</div>
 				<div>댓글</div>
@@ -96,3 +143,10 @@
 	</main>
 </body>
 </html>
+
+
+
+
+
+
+

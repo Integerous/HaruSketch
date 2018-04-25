@@ -38,7 +38,7 @@ em{
 			justify-content: center;
 		width: 90%;
 		max-width: 1056px;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 	}
 	
 		.pics-wrap{
@@ -47,7 +47,7 @@ em{
 			flex: 1;
 			/* max-width: 520px;
 			max-height: 520px; */
-			border: 2px solid green;
+			/* border: 2px solid green; */
 		}
 		
 			.outer-frame{
@@ -66,7 +66,7 @@ em{
 		}
 		.info-wrap h1{
 			font-size: 24px;
-			margin: 20px 0px;
+			margin: 0 0 20px 0;
 		}
 			.price-info{
 				padding-bottom: 24px;
@@ -113,16 +113,44 @@ em{
 				font-size: 12px;
 				color: #999;
 			}
-		.
 
+.ui-top{
+	
+}
+	.txt-title{
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		color: #666;
+		margin: 24px 0 8px;
+	}
+	
+	.option-select > li{
+		margin-top: 8px;
+	}
+	
+select{
+	width: 100%;
+	border-radius: 3px;
+	padding: 8px 12px;
+	font-size: 14px;
+}		
+		
+		
+.ui-bottom{
+	margin-top: 10px;
+}
 	.price-total{
-		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
 		padding: 15px 15px 0px;
 	}
 		.price-total strong{
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: bold;
-			color: #333;
+			color: #dd5850;
+			margin: 0 3px 0 92px;
 			
 		}
 
@@ -171,12 +199,25 @@ button{
 		}
 
 .p-detail-lower{
+	display: flex;
+		flex-direction: column;
 	margin-top : 30px;
 	border: 1px solid red;
 }
-
+	.pdl-control{
+		border-top: 1px solid #d9d9d9;
+		border-bottom: 1px solid #d9d9d9;
+	}
+		.pdl-control a{
+			padding: 18px 48px;	
+		}
 
 /* --------------풋터--------------- */
+ 
+
+
+
+
 
 
 /* --------------데스크탑--------------- */
