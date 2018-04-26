@@ -125,19 +125,140 @@
 			</div>
 			<div class="p-detail-lower">
 				<nav class="pdl-control">
-					<a href="pdl-spec" data-scrol-top="965">
+					<a href="#pdl-spec" class="active" data-scrol-top="965">
 						작품정보
 					</a>
-					<a href="pdl-info" data-scrol-top="965">
+					<a href="#pdl-info" data-scrol-top="965">
 						배송/교환/환불
 					</a>
-					<a href="pdl-cmt" data-scrol-top="965">
-						댓글
+					<a href="#pdl-review" data-scrol-top="965">
+						구매후기
 					</a>
 				</nav>
-				<div>정보</div>
-				<div>후기</div>
-				<div>댓글</div>
+				<div class="pdl-wrap">
+					<section id="pdl-spec">
+						<h1>작품 상세설명</h1>
+						<p class="p-spec">
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.
+						</p>
+					
+					</section>
+					<section id="pdl-review">
+					<h1>구매 후기</h1>
+					<ul class="rlc-grid">
+						<%-- <c:forEach var="note" items="${notes}"> --%>
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							
+							
+							
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>				
+							
+							
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>							
+						<%-- </c:forEach> --%>
+					</ul>
+				</section>
+				</div>
 			</div>
 		</section>
 	</main>

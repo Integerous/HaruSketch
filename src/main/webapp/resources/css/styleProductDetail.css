@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url("styleReviewList.css");
 /* ----tag style reset--------------------------------- */
 * {
     font-family: inherit;
@@ -202,15 +202,42 @@ button{
 	display: flex;
 		flex-direction: column;
 	margin-top : 30px;
-	border: 1px solid red;
+	max-width: 1056px;
+	width: 90%;
 }
 	.pdl-control{
+		display: flex;
+			justify-content: center;
 		border-top: 1px solid #d9d9d9;
 		border-bottom: 1px solid #d9d9d9;
+		height: 56px;
 	}
 		.pdl-control a{
 			padding: 18px 48px;	
 		}
+		
+	.pdl-wrap{
+		display: flex;
+		padding-top: 24px;
+		
+	}	
+		#pdl-spec{
+			flex: 1;
+			border: 1px solid blue;
+			margin-right: 30px;
+		}
+		#pdl-review{
+			flex: 1;
+			
+			border: 1px solid red;
+		}
+			.img-wrap{
+				margin-right: 0;
+			}
+			.text-concat{
+				-webkit-line-clamp: 4;
+			}
+	
 
 /* --------------풋터--------------- */
  
@@ -304,6 +331,31 @@ button{
 		grid-row-gap: 0.3em;
 	}
 
+
+.p-detail-lower{
+	align-items: center;
+}
+	.pdl-wrap{
+		display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			align-items: center;
+		width: 90%;
+	}
+	
+		.pdl-control{
+			display: none;
+		}
+		
+		#pdl-spec{
+			border: 1px solid blue;
+			margin-right: 0px;
+		}
+		#pdl-review{
+			margin-top: 48px;
+			border: 1px solid red;
+		}
+		
 /* -------모바일 footer------- */	
 
 }	
