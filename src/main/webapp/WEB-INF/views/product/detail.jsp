@@ -125,7 +125,7 @@
 			</div>
 			<div class="p-detail-lower">
 				<nav class="pdl-control">
-					<a href="#pdl-spec" class="active" data-scrol-top="965">
+					<!-- <a href="#pdl-spec" class="active" data-scrol-top="965">
 						작품정보
 					</a>
 					<a href="#pdl-info" data-scrol-top="965">
@@ -133,25 +133,71 @@
 					</a>
 					<a href="#pdl-review" data-scrol-top="965">
 						구매후기
-					</a>
+					</a> -->
 				</nav>
 				<div class="pdl-wrap">
 					<section id="pdl-spec">
-						<h1>작품 상세설명</h1>
+						<div class="pdl-s-title">
+							<h1>작품 상세설명</h1>
+						</div>
 						<p class="p-spec">
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
-							여기에 작품설명이 들어갑니다.
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
+							여기에 작품설명이 들어갑니다.<br>여기에 작품설명이 들어갑니다.<br>
 						</p>
-					
+						<div class="pdl-s-title info">
+							<h1>배송/교환/환불</h1>
+						</div>
+						<table class="table-style">
+							<colgroup>
+								<col width="30%">
+								<col width="70%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>배송비</th>
+									<td>
+										<ul>
+											<li>배송비 : <span>3000원</span></li>
+											<li><em>배송비 무료 조건 : <span>50,000원</span></em></li>
+											<li>제주 / 도서산간 추가비용 : <span>3000원</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>제작 / 배송</th>
+									<td>
+										<ul>
+											<li><span>10일 이내</span></li>
+											<li>주문 후 제작에 들어가는 작품으로 받으시기까지 3-7일 정도 소요됩니다.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>교환 / 환불</th>
+									<td>
+										<ul>
+											<li><span>불가</span></li>
+											<li>교환/환불 불가</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
+					
 					<section id="pdl-review">
-					<h1>구매 후기</h1>
+					<div class="pdl-r-title">
+						<h1>구매 후기</h1>
+					</div>
 					<ul class="rlc-grid">
 						<%-- <c:forEach var="note" items="${notes}"> --%>
 							<li>
@@ -254,7 +300,74 @@
 										</div>
 									</div>
 								</a>
-							</li>							
+							</li>
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>				
+							
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<i class="fa fa-star">...</i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>				
+							
+										
 						<%-- </c:forEach> --%>
 					</ul>
 				</section>

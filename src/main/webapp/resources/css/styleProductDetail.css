@@ -181,7 +181,7 @@ button{
 		border-radius: 5px;
 	}
 		.basket-btn{
-			/* flex: 1; */
+			flex: 1;
 			background: #fff;
 			border: 1px solid #dd5850;
 			color: #dd5850;
@@ -193,7 +193,7 @@ button{
 			margin: 0 10px;
 		}
 		.askus-btn{
-			/* flex: 1; */
+			flex: 1;
 			border: 1px solid #999;
 			color: #999;
 		}
@@ -209,8 +209,8 @@ button{
 		display: flex;
 			justify-content: center;
 		border-top: 1px solid #d9d9d9;
-		border-bottom: 1px solid #d9d9d9;
-		height: 56px;
+		/* border-bottom: 1px solid #d9d9d9; */
+		height: 16px;
 	}
 		.pdl-control a{
 			padding: 18px 48px;	
@@ -223,21 +223,69 @@ button{
 	}	
 		#pdl-spec{
 			flex: 1;
-			border: 1px solid blue;
-			margin-right: 30px;
+			margin-right: 80px;
 		}
+			#pdl-spec p{
+				text-align: center;
+			}
+			.pdl-s-title{
+				font-size: 18px;
+				border-bottom: 1px solid #555;
+			    overflow: hidden;
+			    padding-bottom: 8px;
+			    margin-bottom: 16px;
+			}
+				.pdl-s-title.info{
+					margin-top: 67px;
+				}
+			
+			.table-style{
+				margin-top: 24px;
+			    width: 100%;
+			    border-top: 1px solid #555;
+			    border-bottom: 1px solid #555;
+			    border-color: #ccc;
+			    font-size: 14px;
+			    
+			    border-collapse: collapse;
+			    border-spacing: 0;
+			}
+				.table-style th{
+					color: #666;
+					background: #eee;
+    				border-top: 1px solid #ccc;
+				}
+					.table-style td{
+						font-size: 12px;
+						color: #333;
+						padding: 12px 16px;
+   						text-align: left;
+   						border: 1px solid #ccc;
+   						border-right: none;
+					}
+						.table-style li span{
+							color: #22a7af;
+							font-weight: bold;
+						}
+		
+		
 		#pdl-review{
 			flex: 1;
-			
-			border: 1px solid red;
 		}
 			.img-wrap{
 				margin-right: 0;
 			}
 			.text-concat{
 				-webkit-line-clamp: 4;
+				font-size: 14px;
 			}
-	
+			.pdl-r-title{
+				font-size: 18px;
+				border-bottom: 1px solid #555;
+			    overflow: hidden;
+			    padding-bottom: 8px;
+			    margin-bottom: 16px;
+			}
 
 /* --------------풋터--------------- */
  
@@ -272,7 +320,7 @@ button{
 	
 /* -------------------태블릿------------------ */	
 /* -------------------태블릿------------------ */
-@media screen and (max-width: 1060px) and (min-width: 600px){
+@media screen and (min-width: 600px) and (max-width: 1060px){
 	
 	
 /* -------태블릿 header------- */	
@@ -281,6 +329,13 @@ button{
 	.p-detail-upper{
 		width: 90%;
 	}
+		
+		.basket-btn a{
+			font-size: 12px;
+		}
+		.askus-btn a{
+			font-size: 12px;
+		}
 	
 /* -------태블릿 footer------- */		
 
@@ -330,10 +385,12 @@ button{
 	.etc-info ul{
 		grid-row-gap: 0.3em;
 	}
-
+	
+	
 
 .p-detail-lower{
 	align-items: center;
+	width: 100%;
 }
 	.pdl-wrap{
 		display: grid;
@@ -348,13 +405,18 @@ button{
 		}
 		
 		#pdl-spec{
-			border: 1px solid blue;
 			margin-right: 0px;
 		}
 		#pdl-review{
 			margin-top: 48px;
-			border: 1px solid red;
 		}
+			.txt-wrap{
+				padding: 0 15px;
+			}
+				.text-concat{
+					line-height: 1.5;
+					-webkit-line-clamp: 3;
+				}
 		
 /* -------모바일 footer------- */	
 
