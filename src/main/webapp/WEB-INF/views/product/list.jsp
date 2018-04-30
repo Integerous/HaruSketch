@@ -35,11 +35,11 @@
 				<h1>판매상품 목록</h1>
 			</div>		
 			<div class="p-list-filter">
-				<ul class="plf-wrap">
-					<li>판매량순</li>
-					<li>최신순</li>
-					<li>할인상품</li>
-				</ul>
+					<ul class="plf-wrap">
+						<li>판매량순</li>
+						<li>최신순</li>
+						<li>할인상품</li>
+					</ul>
 			</div>
 			<div class="p-list-content">
 				<div class="plc-wrap">

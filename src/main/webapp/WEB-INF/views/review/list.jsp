@@ -14,7 +14,7 @@
 <title>Insert title here</title>
 
 <link href="${ctx}/resources/css/styleReviewList.css" type="text/css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -44,13 +44,13 @@
 						<%-- <c:forEach var="note" items="${notes}"> --%>
 							<li>
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
-									<div class="r-rating-name-date">
+									<div class="r-rating-name-date">	
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -68,14 +68,7 @@
 												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
 												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
 												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+											
 											</span>
 										</div>
 									</div>
@@ -89,51 +82,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<em>한정수</em>
-										</span>
-										<span class="ui-date">2018년 4월 15일</span>
-									</div>
-									<div class="r-img-text">
-										<div class="img-wrap">
-											<img src="${ctx}/resources/images/bok1.png">						
-										</div>
-										<div class="txt-wrap">
-											<span class="text-concat">
-												${review.content}
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
-											</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							
-							<li>
-								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
-									<div class="r-rating-name-date">
-										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -169,11 +122,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -209,11 +162,51 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
+											<em>한정수</em>
+										</span>
+										<span class="ui-date">2018년 4월 15일</span>
+									</div>
+									<div class="r-img-text">
+										<div class="img-wrap">
+											<img src="${ctx}/resources/images/bok1.png">						
+										</div>
+										<div class="txt-wrap">
+											<span class="text-concat">
+												${review.content}
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+												여기에는 고객의 구매후기가 담길 곳입니다. 여기에는 고객의 구매후기가 담길 곳입니다.
+											</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
+									<div class="r-rating-name-date">
+										<span class="ui-rating" data-ui="rating" data-value="5">
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>

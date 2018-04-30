@@ -16,11 +16,12 @@
 
 <!-- -----CSS----- -->
 <link href="${ctx}/resources/css/styleProductDetail.css" type="text/css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- -----JQuery & JavaScript ----- -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx}/resources/js/productDetail.js"></script>
+
 
  
 </head>
@@ -204,11 +205,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -239,11 +240,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -273,11 +274,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -305,11 +306,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>
@@ -338,11 +339,11 @@
 								<a href="" data-ui="modal-link" data-ui-option="{"disableUrlChange":true}">
 									<div class="r-rating-name-date">
 										<span class="ui-rating" data-ui="rating" data-value="5">
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
-											<i class="fa fa-star">...</i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star checked"></i>
+											<i class="fa fa-star"></i>
 											<em>한정수</em>
 										</span>
 										<span class="ui-date">2018년 4월 15일</span>

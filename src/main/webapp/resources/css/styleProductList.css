@@ -51,11 +51,11 @@
 		display: flex;
 			justify-content: flex-start;
 			align-items: center;
-		width: 60%;
+		width: 1056px;
 	}
 		.plf-wrap > li{
 			margin: 0px 10px;
-			font-size: 13px;
+			font-size: 14px;
 		}
 		
 /* -----list-content----- */
@@ -68,7 +68,8 @@
 .plc-wrap{
 	
 	/* margin:auto; */
-	width: 60%;
+	/* width: 60%; */
+	max-width: 1056px;
 }
 
 .plc-grid{
@@ -139,7 +140,7 @@
 
 /* -------태블릿 main------- */
 	.plc-wrap{
-		/* width: 80%; */
+		width:100%;
 	}
 	
 /* -------태블릿 footer------- */		
@@ -171,7 +172,7 @@
 		
 	.plc-wrap {
    /*  margin: auto; */
-    width: 70%;
+    width: 90%;
 	}
 	
 	.p-list-title{
