@@ -59,7 +59,7 @@
 						<a href="${ctx}/review/list">Review</a>
 					</li>
 					<li class="contact">
-						<a href="${ctx}/contat">Contact</a>
+						<a href="${ctx}/contact">Contact</a>
 					</li>
 				</ul>
 			</nav>

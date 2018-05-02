@@ -379,7 +379,28 @@
 </body>
 </html>
 
+<script>
+	
+	window.addEventListener("load",function(event){
 
+		var hamButton = document.querySelector("#ham-btn");
+		var aside = document.querySelector(".aside");
+		
+		hamButton.onclick = function(e){
+
+			if(aside.classList.contains("show"))
+				aside.classList.remove("show");
+			
+			else
+				aside.classList.add("show")
+				
+			
+			e.preventDefault();
+		};
+
+	});
+	
+</script>
 
 
 
