@@ -29,9 +29,9 @@ public class HibernateConfig {
       
       ComboPooledDataSource dataSource = new ComboPooledDataSource();
       dataSource.setDriverClass("com.mysql.jdbc.Driver");
-      dataSource.setJdbcUrl("jdbc:mysql://vaio.notepubs.com/notepubsdb?serverTimezone=UTC&amp;autoReconnect=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8");
-      dataSource.setUser("notepubs");
-      dataSource.setPassword("cclass");
+      dataSource.setJdbcUrl("jdbc:mysql://haru-db.cgtz5bon0h1u.ap-northeast-2.rds.amazonaws.com/harudb?serverTimezone=UTC&autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8");
+      dataSource.setUser("root");
+      dataSource.setPassword("tnqkr0820");
       dataSource.setMinPoolSize(5); 
       dataSource.setMaxPoolSize(20);
       dataSource.setMaxIdleTime(3000);
