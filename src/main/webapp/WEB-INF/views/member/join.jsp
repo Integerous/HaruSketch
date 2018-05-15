@@ -6,7 +6,7 @@
 <main class="main">
   <section>
     <h1>회원가입 폼</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
       <fieldset>
         <legend>로그인 필드</legend>
 			<table>
@@ -24,7 +24,7 @@
 				</tr>
 				<tr>
 				  <th>사진:<th>
-				  <td><input type="file"/></td>
+				  <td><input type="file" name="file"/></td>
 				</tr>
 				<tr>
 				  <td colspan="2">
@@ -37,5 +37,26 @@
 	</section>
 </main>
        
-      
+<script>
+	
+	window.addEventListener("load",function(event){
+
+		var hamButton = document.querySelector("#ham-btn");
+		var aside = document.querySelector(".aside");
+		
+		hamButton.onclick = function(e){
+
+			if(aside.classList.contains("show"))
+				aside.classList.remove("show");
+			
+			else
+				aside.classList.add("show")
+				
+			
+			e.preventDefault();
+		};
+
+	});
+	
+</script>      
     

@@ -36,7 +36,7 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			.csrf().disable()
 			.authorizeRequests()
 			/*------------------------------------*/
-			/*.antMatchers("/member/join").anonymous()*/
+			.antMatchers("/member/join").anonymous()
 			.antMatchers("/member/**").hasRole("MEMBER")
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			
@@ -76,17 +76,20 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			
 			
 			auth
-			/*.jdbcAuthentication()
+			.jdbcAuthentication()
 			.dataSource(dataSource)
 			.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
-			.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
-			.passwordEncoder(new BCryptPasswordEncoder());*/
+			.authoritiesByUsernameQuery("select id, role authority from Member where id=?")
+			.passwordEncoder(new BCryptPasswordEncoder());
 		
-			.inMemoryAuthentication()
+			//DB연동 안된 임시 사용자아이디 사용할때.
+			/*.inMemoryAuthentication()
 			.withUser(users.username("newlec").password("{noop}111").roles("MEMBER"))
-			.withUser(users.username("dragon").password("{noop}111").roles("ADMIN"));
+			.withUser(users.username("dragon").password("{noop}111").roles("ADMIN"));*/
 			
 		}
+	
+	
 	
 	
 }

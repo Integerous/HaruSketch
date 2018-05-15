@@ -14,6 +14,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
 
 import com.harusketch.service.MemberService;
@@ -43,18 +44,23 @@ public class HarusketchLoginSuccessHandler
 			
 			
 			HttpSession session = request.getSession();
-			
-			
-			/*if(session != null)
+						
+			if(session != null) {
 				SavedRequest savedRequest = (SavedRequest) session.getAttribute("SPRING_SECURITY_SAVED_REQUEST");
 			
-				if(savedRequest !=null) {
-					String returnUrl = saveRequest.getRedirectUrl();
-					redirectStrategy.sendRedirect(request, reponse, returnUrl);
+				if(savedRequest !=null) { // 요청에 인터럽트가 걸린 경우 -> 가려던 그 페이지로 보내줘야함
+					String returnUrl = savedRequest.getRedirectUrl();
+					System.out.println(returnUrl);
+					redirectStrategy.sendRedirect(request, response, returnUrl);
 				}
-				else {
-					String defaultRole = service.getDefaultRolByMemberId(memberId);
-				}*/
+				else { //직접 로그인을 요청한 경우
+					/*String defaultRole = service.getDefaultRolByMemberId(memberId);*/
+					redirectStrategy.sendRedirect(request, response, "/index");
+				}
+			}
+			
+			
+			
 		}
 
 }

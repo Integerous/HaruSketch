@@ -16,15 +16,17 @@ public class Member {
 	private String phone;
 	private String photo;
 	private Date regDate;
+	private String role;
 	private int orderCheck;
 	
 	public Member() {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 
 	public Member(String id, String pwd, String name, String address, String phone, String photo, Date regDate,
-			int orderCheck) {
+			String role, int orderCheck) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
@@ -33,16 +35,17 @@ public class Member {
 		this.phone = phone;
 		this.photo = photo;
 		this.regDate = regDate;
+		this.role = role;
 		this.orderCheck = orderCheck;
 	}
 
-	
 
 	@Override
 	public String toString() {
 		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", address=" + address + ", phone=" + phone
-				+ ", photo=" + photo + ", regDate=" + regDate + ", orderCheck=" + orderCheck + "]";
+				+ ", photo=" + photo + ", regDate=" + regDate + ", role=" + role + ", orderCheck=" + orderCheck + "]";
 	}
+
 
 
 	public String getId() {
@@ -50,9 +53,11 @@ public class Member {
 	}
 
 
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
 
 
 	public String getPwd() {
@@ -60,9 +65,11 @@ public class Member {
 	}
 
 
+
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
+
 
 
 	public String getName() {
@@ -70,9 +77,11 @@ public class Member {
 	}
 
 
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 
 	public String getAddress() {
@@ -80,9 +89,11 @@ public class Member {
 	}
 
 
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 
 
 	public String getPhone() {
@@ -90,9 +101,11 @@ public class Member {
 	}
 
 
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 
 
 	public String getPhoto() {
@@ -100,9 +113,11 @@ public class Member {
 	}
 
 
+
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
+
 
 
 	public Date getRegDate() {
@@ -110,9 +125,23 @@ public class Member {
 	}
 
 
+
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 
 
 	public int getOrderCheck() {
@@ -120,11 +149,10 @@ public class Member {
 	}
 
 
+
 	public void setOrderCheck(int orderCheck) {
 		this.orderCheck = orderCheck;
 	}
-	
-
 
 	
 	
