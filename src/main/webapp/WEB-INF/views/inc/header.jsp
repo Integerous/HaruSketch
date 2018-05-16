@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <!-- ---------------------HEADER---------------------- -->
@@ -16,29 +17,25 @@
 					</div>
 					<ul class="tb-right">
 						
-						<c:if test="${not empty sessionScope.id}">
+						<sec:authorize access="isAuthenticated()">
 							<li class="tbr-web">
 								<a href="${ctx}/logout">Logout</a>
 							</li>
-						</c:if>
+							<li class="tbr-web">
+								<a href="">MyOrder</a>
+							</li>
+						</sec:authorize>
 						
-						<c:if test="${empty sessionScope.id}">
+						<sec:authorize access="!isAuthenticated()">
 							<li class="tbr-web">
 								<a href="${ctx}/member/login">Login</a>
 							</li>
-						</c:if>
-						
-						<c:if test="${empty sessionScope.id}">
 							<li class="tbr-web">
 								<a href="${ctx}/member/join">Join</a>
 							</li>
-						</c:if>
+						</sec:authorize>
 						
-						<c:if test="${not empty sessionScope.id}">
-						<li class="tbr-web">
-							<a href="">MyOrder</a>
-						</li>
-						</c:if>
+						
 						
 						<li id="ham-btn"><img src="${ctx}/resources/images/white-hamburg-48.png"></li>
 					</ul>

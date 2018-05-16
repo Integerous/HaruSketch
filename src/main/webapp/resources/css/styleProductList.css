@@ -70,6 +70,7 @@
 	/* margin:auto; */
 	/* width: 60%; */
 	max-width: 1056px;
+	width: 95%;
 }
 
 .plc-grid{
@@ -140,7 +141,7 @@
 
 /* -------태블릿 main------- */
 	.plc-wrap{
-		width:100%;
+		width: 95%;
 	}
 	
 /* -------태블릿 footer------- */		
