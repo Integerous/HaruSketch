@@ -17,11 +17,13 @@
 <!-- -----CSS----- -->
 <link href="${ctx}/resources/css/styleProductDetail.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="${ctx}/resources/css/slider-pro.min.css">
 <!-- -----JQuery & JavaScript ----- -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx}/resources/js/productDetail.js"></script>
 
+<script src="${ctx}/resources/js/jquery-1.11.0.min.js"></script>
+<script src="${ctx}/resources/js/jquery.sliderPro.min.js"></script>
 
  
 </head>
@@ -30,11 +32,30 @@
 		<section class="p-detail-nested">
 			<div class="p-detail-upper">
 				<section class="pics-wrap">
-					<div class="outer-frame">
+					<%-- <div class="outer-frame">
 						<img src="${ctx}/resources/images/bok1.png">
-					</div>
-					<div class="ui-control">ui컨트</div>
+					</div> --%>
+					<!-- <div class="ui-control">ui컨트</div> -->
 					
+					<div class="slider-pro" id="my-slider">
+						<div class="sp-slides">
+							<!-- Slide 1 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/bok1.png"/>
+							</div>
+							
+							<!-- Slide 2 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/bok2.png"/>
+							</div>
+							
+							<!-- Slide 3 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/keyring1.png"/>
+							</div>
+						</div>
+					</div>
+										
 					
 				</section>
 				<section class="info-wrap">
@@ -402,6 +423,11 @@
 	
 </script>
 
+<script type="text/javascript">
+	jQuery( document ).ready(function( $ ) {
+		$( '#my-slider' ).sliderPro();
+	});
+</script>
 
 
 

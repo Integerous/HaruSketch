@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,44 +13,66 @@
              initial-scale=1, minimum-scale=1, user-scalable=1"/>
 <title>Insert title here</title>
 
-<link href="resources/css/style.css" type="text/css" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="resources/css/index.css" type="text/css" rel="stylesheet">
 
 </head>
-<body>
-	<header class="header">
-		<h1>블로그</h1>
-			<nav class="main-menu">
-			<h1 class="hidden">메인메뉴</h1>
-				<ul>	
-					<li><a href=""><img src="resources/images/ic_dehaze_black_24dp_1x.png"></a></li>
-					<li><a href=""><img src="resources/images/ic_search_black_24dp_1x.png"></a></li>
-					<!-- <li><li><a href=""><img src=""></a></li></li> -->
-				</ul>
-			</nav>
-	</header>
-	
-	<main class="main">
-		<section class="note-list">
-			<h1 class="hidden">노트목록</h1>
-			<ul>
-				<c:forEach begin="0" end="9">
-				<li>
-					<div>노트 제목</div>
-					<div>노트 내용이 들어갈 부분입니다.노트 내용이 들어갈 부분입니다.노트 내용이 들어갈 부분입니다.</div>
-					<div><span>분류</span><span>2018-03-22 15:23</span></div>
-				</li>
-				</c:forEach>
-			</ul>
-		</section>
-	</main>
-</body>
+  <body>
+	  <div class="main">
+	    <div class="slide">
+	      <img id="back" src="${ctx}/resources/images/angle-left.svg" alt="" width="40">
+	      <ul>
+	        <li><img src="${ctx}/resources/images/1.jpg" alt="" ></li>
+	        <li><img src="${ctx}/resources/images/2.jpg" alt="" ></li>
+	        <li><img src="${ctx}/resources/images/3.jpg" alt="" ></li>
+	      </ul>
+	      <img id="next" src="${ctx}/resources/images/chevron-right.svg" alt="" width="40">
+	    </div>
+	  </div>
+  </body>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var imgs;
+      var img_count;
+      var img_position = 1;
+
+      imgs = $(".slide ul");
+      img_count = imgs.children().length;
+
+      //버튼을 클릭했을 때 함수 실행
+      $('#back').click(function () {
+        back();
+      });
+      $('#next').click(function () {
+        next();
+      });
+
+      function back() {
+        if(1<img_position){
+          imgs.animate({
+            left:'+=2000px'
+          });
+          img_position--;
+        }
+      }
+      function next() {
+        if(img_count>img_position){
+          imgs.animate({
+            left:'-=2000px'
+          });
+          img_position++;
+        }
+      }
+    });
+  </script>
 </html>
 
 
 
 
-<script>
+<!-- <script>
 	
 	window.addEventListener("load",function(event){
 
@@ -70,4 +93,4 @@
 
 	});
 	
-</script>
+</script> -->
