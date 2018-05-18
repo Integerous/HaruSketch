@@ -32,9 +32,9 @@ public class ProductController {
 	@RequestMapping("list")
 	public String list(Integer page, Model model) {
 		
-		List<Product> list = service.getProductList(page);
+		/*List<Product> list = service.getProductList(page);
 		
-		model.addAttribute("products", list);
+		model.addAttribute("products", list);*/
 		
 		return "member.product.list";
 	}
@@ -43,9 +43,9 @@ public class ProductController {
 	@RequestMapping("{id}") //여기 원래 detail
 	public String detail(@PathVariable("id") Integer id, Model model) {
 		
-		Product product = service.getProduct(id);
+		/*Product product = service.getProduct(id);
 		
-		model.addAttribute("product", product);
+		model.addAttribute("product", product);*/
 		
 		return "member.product.detail";
 	}

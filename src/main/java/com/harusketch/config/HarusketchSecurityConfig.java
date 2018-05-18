@@ -37,7 +37,7 @@ public class HarusketchSecurityConfig extends WebSecurityConfigurerAdapter{
 			.authorizeRequests()
 			/*------------------------------------*/
 			.antMatchers("/member/join").anonymous()
-			.antMatchers("/member/**").hasRole("MEMBER")
+			.antMatchers("/member/**").hasAnyRole("MEMBER","ADMIN")
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			
 			/*------------------------------------*/

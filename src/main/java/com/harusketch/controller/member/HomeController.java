@@ -23,11 +23,25 @@ public class HomeController {
 		
 		String mbrId = principal.getName();
 		//System.out.println(mbrId);
-		Member member = service.getMemberInfo(mbrId);
-		//System.out.println(member);
-		model.addAttribute("member", member);
 		
+		if(mbrId!=null) {
+			Member member = service.getMemberInfo(mbrId);
+			//System.out.println(member);
+			model.addAttribute("member", member);
+		}
 		return "member.index";
+	}
+	
+	@GetMapping("about")
+	public String about() {
+		
+		return "member.about";
+	}
+	
+	@GetMapping("contact")
+	public String contact() {
+		
+		return "member.contact";
 	}
 	
 

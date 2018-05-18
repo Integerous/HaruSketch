@@ -16,14 +16,15 @@
 							<img src="${ctx}/resources/images/n-logo.png"></a>
 					</div>
 					<ul class="tb-right">
-					
-						<sec:authentication var="user" property="principal"/>
+						
+						<sec:authentication var="user" property="principal"/> 
 						<sec:authorize access="isAuthenticated()">
-						<li class="tbr-web">
+						
+							<li class="tbr-web">
 								<a href=""> <img src="${ctx}${member.photo}"/></a>
 							</li>
 							<li class="tbr-web">
-								<a href=""> ${member.id}님 안녕하세요</a>
+								<a href=""> ${member.name} 님 안녕하세요 :)</a>
 							</li>
 							<li class="tbr-web">
 								<a href=""> ${user.username}님 안녕하세요</a>
@@ -34,6 +35,7 @@
 							<li class="tbr-web">
 								<a href="">MyOrder</a>
 							</li>
+							
 						</sec:authorize>
 						
 						<sec:authorize access="!isAuthenticated()">
@@ -61,6 +63,7 @@
 			</div>			
 			<nav class="nav-bar">
 				<ul class="nav-wrap">
+				<sec:authorize access="!isAuthenticated()">
 					<li class="about">
 						<a href="${ctx}/about">About</a>
 					</li>
@@ -73,6 +76,22 @@
 					<li class="contact">
 						<a href="${ctx}/contact">Contact</a>
 					</li>
+				</sec:authorize>
+				<sec:authorize access="isAuthenticated()">
+					<li class="about">
+						<a href="${ctx}/member/about">About</a>
+					</li>
+					
+					<li class="product">
+						<a href="${ctx}/member/product/list">Product</a>
+					</li>
+					<li class="review">
+						<a href="${ctx}/member/review/list">Review</a>
+					</li>
+					<li class="contact">
+						<a href="${ctx}/member/contact">Contact</a>
+					</li>
+				</sec:authorize>
 				</ul>
 			</nav>
 		</section>

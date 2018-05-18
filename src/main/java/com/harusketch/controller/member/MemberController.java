@@ -62,7 +62,7 @@ public class MemberController {
         ServletContext ctx = request.getServletContext();
         
         System.out.println(ctx);
-        String fpath = "/resources/profile/"+member.getId();
+        String fpath = "/resources/profile/"+member.getId(); //경로 짜르기
          String path = ctx.getRealPath(fpath); //물리경로
          File filepath = new File(path);
          if(!filepath.exists())
@@ -114,7 +114,7 @@ public class MemberController {
 		/*service.addGuest(guest);
 		service.saveGuest(guest);*/ /*이 셋중 하나 쓰면됌*/
 		
-		return "member.index";
+		return "member.afterJoin";
 		
 		
 	

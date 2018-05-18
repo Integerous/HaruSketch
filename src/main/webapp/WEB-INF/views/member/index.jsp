@@ -5,7 +5,7 @@
 
 <main>
 	<section>
-		<h1>회원가입에 성공했습니다!</h1>
-		<a href="${ctx}/member/login">로그인하기</a>
+		<h1>인덱스</h1>
+		
 	</section>
 </main>

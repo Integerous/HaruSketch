@@ -23,9 +23,9 @@
 	    <div class="slide">
 	      <img id="back" src="${ctx}/resources/images/angle-left.svg" alt="" width="40">
 	      <ul>
-	        <li><img src="${ctx}/resources/images/1.jpg" alt="" ></li>
-	        <li><img src="${ctx}/resources/images/2.jpg" alt="" ></li>
-	        <li><img src="${ctx}/resources/images/3.jpg" alt="" ></li>
+	        <li><img src="${ctx}/resources/images/keyring1.png" alt="" ></li>
+	        <li><img src="${ctx}/resources/images/keyring2.png" alt="" ></li>
+	        <li><img src="${ctx}/resources/images/keyring3.png" alt="" ></li>
 	      </ul>
 	      <img id="next" src="${ctx}/resources/images/chevron-right.svg" alt="" width="40">
 	    </div>

@@ -38,8 +38,8 @@ public class HarusketchLoginSuccessHandler
 		public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
 				throws IOException, ServletException {
 			
-			String memberId = authentication.getName();
-			Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
+			/*String memberId = authentication.getName();
+			Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());*/
 			
 			
 			
