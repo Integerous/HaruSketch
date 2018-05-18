@@ -17,13 +17,38 @@
 <!-- -----CSS----- -->
 <link href="${ctx}/resources/css/styleProductDetail.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="${ctx}/resources/css/slider-pro.min.css">
+<link rel="stylesheet" href="${ctx}/resources/css/slider-pro.css">
+<link rel="stylesheet" href="${ctx}/resources/css/example.css">
 <!-- -----JQuery & JavaScript ----- -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx}/resources/js/productDetail.js"></script>
 
 <script src="${ctx}/resources/js/jquery-1.11.0.min.js"></script>
-<script src="${ctx}/resources/js/jquery.sliderPro.min.js"></script>
+<script src="${ctx}/resources/js/jquery.sliderPro.js"></script>
+
+
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#my-slider' ).sliderPro({
+			width: 100%,
+			height: auto,
+			fade: false,
+			arrows: true,
+			buttons: true,
+			fullScreen: true,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			thumbnailPointer: true,
+			autoplay: true,
+			autoplayDelay: 3000
+		});
+	});
+</script>
+
 
  
 </head>
@@ -42,18 +67,35 @@
 							<!-- Slide 1 -->
 							<div class="sp-slide">
 								<img class="sp-image" src="${ctx}/resources/images/bok1.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/bok1.png"/>
 							</div>
-							
 							<!-- Slide 2 -->
 							<div class="sp-slide">
 								<img class="sp-image" src="${ctx}/resources/images/bok2.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/bok2.png"/>
 							</div>
-							
 							<!-- Slide 3 -->
 							<div class="sp-slide">
 								<img class="sp-image" src="${ctx}/resources/images/keyring1.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/keyring1.png"/>
+							</div>
+							<!-- Slide 4 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/keyring2.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/keyring2.png"/>
+							</div>
+							<!-- Slide 5 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/keyring3.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/keyring3.png"/>
+							</div>
+							<!-- Slide 6 -->
+							<div class="sp-slide">
+								<img class="sp-image" src="${ctx}/resources/images/keyring4.png"/>
+								<img class="sp-thumbnail" src="${ctx}/resources/images/keyring4.png"/>
 							</div>
 						</div>
+		
 					</div>
 										
 					

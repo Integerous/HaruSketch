@@ -16,8 +16,18 @@
 							<img src="${ctx}/resources/images/n-logo.png"></a>
 					</div>
 					<ul class="tb-right">
-						
+					
+						<sec:authentication var="user" property="principal"/>
 						<sec:authorize access="isAuthenticated()">
+						<li class="tbr-web">
+								<a href=""> <img src="${ctx}${member.photo}"/></a>
+							</li>
+							<li class="tbr-web">
+								<a href=""> ${member.id}님 안녕하세요</a>
+							</li>
+							<li class="tbr-web">
+								<a href=""> ${user.username}님 안녕하세요</a>
+							</li>
 							<li class="tbr-web">
 								<a href="${ctx}/logout">Logout</a>
 							</li>
@@ -42,7 +52,12 @@
 				</div>
 			</div>		
 			<div class="logo-bar">
+			<sec:authorize access="!isAuthenticated()">
 					<a href="${ctx}/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
+			</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+					<a href="${ctx}/member/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
+			</sec:authorize>
 			</div>			
 			<nav class="nav-bar">
 				<ul class="nav-wrap">

@@ -56,17 +56,17 @@ public class MemberController {
 	
 	//@RequestMapping(value="join", method=RequestMethod.GET)
 	@PostMapping("join")
-	@ResponseBody
 	public String join(Member member, MultipartFile file, HttpServletRequest request) {
 		
 		System.out.println(file);
         ServletContext ctx = request.getServletContext();
         
         System.out.println(ctx);
-         String path = ctx.getRealPath("/resources/profile/"+member.getId()); //물리경로
+        String fpath = "/resources/profile/"+member.getId();
+         String path = ctx.getRealPath(fpath); //물리경로
          File filepath = new File(path);
          if(!filepath.exists())
-            filepath.mkdir();
+            filepath.mkdirs();
          
          System.out.println(path);
          System.out.println(filepath);
@@ -76,7 +76,7 @@ public class MemberController {
            try {
               String fname = file.getOriginalFilename();  
               System.out.println(fname);
-              member.setPhoto(path+"/"+fname);
+              member.setPhoto(fpath+"/"+fname);
               
               InputStream fis = file.getInputStream();
        
@@ -114,7 +114,7 @@ public class MemberController {
 		/*service.addGuest(guest);
 		service.saveGuest(guest);*/ /*이 셋중 하나 쓰면됌*/
 		
-		return pwd + ":" + hashedPwd;
+		return "member.index";
 		
 		
 	

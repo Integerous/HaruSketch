@@ -25,5 +25,15 @@ public class HbMemberDao implements MemberDao {
 		return 1;
 	}
 
+	@Override
+	public Member get(String mbrId) {
+		
+		Session session = sessionFactory.getCurrentSession();
+		
+		Member member = session.get(Member.class, mbrId);
+		
+		return member;
+	}
+
 	
 }

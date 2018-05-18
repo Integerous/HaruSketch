@@ -22,5 +22,13 @@ public class MemberService {
 		return result;
 		
 	}
+	
+	@Transactional
+	public Member getMemberInfo(String mbrId) {
+
+		Member member = memberDao.get(mbrId);
+		
+		return member;
+	}
 
 }

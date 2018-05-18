@@ -2,6 +2,7 @@ package com.harusketch.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,7 +16,9 @@ public class Member {
 	private String address;
 	private String phone;
 	private String photo;
+	@Column(insertable=false)
 	private Date regDate;
+	@Column(insertable=false)
 	private String role;
 	private int orderCheck;
 	
