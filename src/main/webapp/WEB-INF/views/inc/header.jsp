@@ -27,7 +27,7 @@
 								<a href=""> ${member.name} 님 안녕하세요 :)</a>
 							</li>
 							<li class="tbr-web">
-								<a href=""> ${user.username}님 안녕하세요</a>
+								<a href=""> ${user.username} 님 안녕하세요</a>
 							</li>
 							<li class="tbr-web">
 								<a href="${ctx}/logout">Logout</a>
@@ -79,11 +79,10 @@
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
 					<li class="about">
-						<a href="${ctx}/member/about">About</a>
+						<a href="${ctx}/about">About</a>
 					</li>
-					
 					<li class="product">
-						<a href="${ctx}/member/product/list">Product</a>
+						<a href="${ctx}/product/list">Product</a>
 					</li>
 					<li class="review">
 						<a href="${ctx}/member/review/list">Review</a>

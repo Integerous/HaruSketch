@@ -32,12 +32,14 @@ public class HomeController {
 		return "member.index";
 	}
 	
-	@GetMapping("about")
-	public String about() {
-		
-		return "member.about";
-	}
 	
+	
+	@GetMapping("review")
+	public String review() {
+		
+		return "member.review";
+	}
+
 	@GetMapping("contact")
 	public String contact() {
 		
