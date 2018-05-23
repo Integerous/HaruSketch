@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="${ctx}/resources/css/slider-pro.css">
 <link rel="stylesheet" href="${ctx}/resources/css/example.css">
+
 <!-- -----JQuery & JavaScript ----- -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx}/resources/js/productDetail.js"></script>
@@ -31,19 +32,21 @@
 <script type="text/javascript">
 	$( document ).ready(function( $ ) {
 		$( '#my-slider' ).sliderPro({
-			width: 100%,
-			height: auto,
+			width: 513,
+			height: 500,
 			fade: false,
 			arrows: true,
-			buttons: true,
-			fullScreen: true,
-			shuffle: true,
-			smallSize: 500,
+			buttons: false,
+			fullScreen: false,
+			shuffle: false,
+			smallSize: 400,
 			mediumSize: 1000,
 			largeSize: 3000,
 			thumbnailArrows: true,
 			thumbnailPointer: true,
-			autoplay: true,
+			autoplay: false,
+			autoHeight: true,
+			thumbnailHeight: 110,
 			autoplayDelay: 3000
 		});
 	});
@@ -57,10 +60,7 @@
 		<section class="p-detail-nested">
 			<div class="p-detail-upper">
 				<section class="pics-wrap">
-					<%-- <div class="outer-frame">
-						<img src="${ctx}/resources/images/bok1.png">
-					</div> --%>
-					<!-- <div class="ui-control">ui컨트</div> -->
+					
 					
 					<div class="slider-pro" id="my-slider">
 						<div class="sp-slides">
