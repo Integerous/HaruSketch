@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -32,9 +33,9 @@ public class ProductController {
 	@RequestMapping("list")
 	public String list(Integer page, Model model) {
 		
-		/*List<Product> list = service.getProductList(page);
+		/*List<Product> products = service.getProductList(page);
 		
-		model.addAttribute("products", list);*/
+		model.addAttribute("products", products);*/
 		
 		return "member.product.list";
 	}
@@ -66,9 +67,9 @@ public class ProductController {
 	
 	@RequestMapping(value="reg" , method=RequestMethod.POST)
 	//public String reg(String title, String content) {
-		public String reg(Product product, MultipartFile file, HttpServletRequest request) { //여기에 Note note 넣어두면 자동으로 setter를 확인해서 담아줌?
+		public String reg(Principal principal, Product product, MultipartFile file, HttpServletRequest request) { //여기에 Note note 넣어두면 자동으로 setter를 확인해서 담아줌?
 		
-		String memberId = "newlec";
+		String memberId = principal.getName();
 		ServletContext ctx = request.getServletContext();
 	      String path = ctx.getRealPath("/resources/product/"+memberId); //나중에 newlec 대신 회원 아이디를 넣어야함
 		File f = new File(path);
@@ -102,7 +103,7 @@ public class ProductController {
 		//file.getSize(); //파일사이즈 가 0kb면 에러처리
 		//file.isEmpty(); //파일 첨부안했을 경우도 있으므로 이 조건검사안하면 오류남.
 		
-		int result = service.insertProduct(product);
+		/*int result = */service.insertProduct(product);
 		
 		return "redirect:list"; //list로 가고싶다 하지만 이것은 view가 아니다.
 	}

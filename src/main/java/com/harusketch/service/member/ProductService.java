@@ -17,20 +17,21 @@ public class ProductService {
 	private ProductDao productDao;
 
 
-	public List<Product> getProductList(int page) {
+	public List<Product> getProductList(Integer page) {
 
 		List<Product> list = productDao.getList(page);
 		
 		for(Product p : list) {
-			String content = p.getContent();
-			if(content==null) continue;
+			String title = p.getTitle();
+			if(title==null) continue;
 			
-			String text = Jsoup.parse(content).text();
+			/*String text = Jsoup.parse(title).text();
 			
 			if(text.length()>=250)
-				text = text.substring(0, 249);
+				text = text.substring(0, 249);*/
 			
-			p.setContent(text);	
+			/*p.setContent(text);*/
+			p.setTitle(title);
 		}
 		
 		return list;
@@ -44,7 +45,7 @@ public class ProductService {
 	}
 
 
-	public Product getProduct(Integer id) {
+	public Product getProduct(String id) {
 		
 			Product product = productDao.get(id);
 			

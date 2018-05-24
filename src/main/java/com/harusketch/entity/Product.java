@@ -2,51 +2,72 @@ package com.harusketch.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Product {
 	
 	@Id
-	private int id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private String id;
 	private String title;
-	private String content;
+	private String category;
+	private String price;
+	private String quantity;
+	private String totalPrice;
+	private String description;
+	private String img;
+	@Column(insertable=false)
 	private Date regDate;
-	private int hit;
+	
+	
 
-
+	
 	public Product() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 
-	public Product(int id, String title, String content, Date regDate, int hit) {
+
+	public Product(String id, String title, String category, String price, String quantity, String totalPrice,
+			String description, String img, Date regDate) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.content = content;
+		this.category = category;
+		this.price = price;
+		this.quantity = quantity;
+		this.totalPrice = totalPrice;
+		this.description = description;
+		this.img = img;
 		this.regDate = regDate;
-		this.hit = hit;
 	}
 
-	
+
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", title=" + title + ", content=" + content + ", regDate=" + regDate + ", hit="
-				+ hit + "]";
+		return "Product [id=" + id + ", title=" + title + ", category=" + category + ", price=" + price + ", quantity="
+				+ quantity + ", totalPrice=" + totalPrice + ", description=" + description + ", img=" + img
+				+ ", regDate=" + regDate + "]";
 	}
 
 
-	public int getId() {
+
+	public String getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+
+	public void setId(String id) {
 		this.id = id;
 	}
+
 
 
 	public String getTitle() {
@@ -54,19 +75,83 @@ public class Product {
 	}
 
 
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
 
-	public String getContent() {
-		return content;
+
+	public String getCategory() {
+		return category;
 	}
 
 
-	public void setContent(String content) {
-		this.content = content;
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
+
+
+
+	public String getPrice() {
+		return price;
+	}
+
+
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+
+
+	public String getQuantity() {
+		return quantity;
+	}
+
+
+
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+
+
+
+	public String getTotalPrice() {
+		return totalPrice;
+	}
+
+
+
+	public void setTotalPrice(String totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+
+	public String getImg() {
+		return img;
+	}
+
+
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
 
 
 	public Date getRegDate() {
@@ -74,19 +159,12 @@ public class Product {
 	}
 
 
+
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
 
 
-	public int getHit() {
-		return hit;
-	}
-
-
-	public void setHit(int hit) {
-		this.hit = hit;
-	}
 
 
 	

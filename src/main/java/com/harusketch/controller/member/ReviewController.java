@@ -34,10 +34,10 @@ public class ReviewController {
 	@RequestMapping("list")
 	public String list(Integer page, Model model) {
 		
-		List<Review> list = service.getReviewList(page);
+		/*List<Review> list = service.getReviewList(page);
 		
 		model.addAttribute("reviews", list);
-		
+		*/
 		return "member.review.list";
 	}
 	
@@ -45,9 +45,9 @@ public class ReviewController {
 	@RequestMapping("{id}") //여기 원래 detail
 	public String detail(@PathVariable("id") Integer id, Model model) {
 		
-		Review review = service.getReview(id);
+		/*Review review = service.getReview(id);
 		
-		model.addAttribute("review", review);
+		model.addAttribute("review", review);*/
 		
 		return "member.review.detail";
 	}

@@ -1,4 +1,4 @@
-package com.harusketch.service;
+package com.harusketch.service.member;
 
 import javax.transaction.Transactional;
 

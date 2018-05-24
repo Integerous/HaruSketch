@@ -20,20 +20,26 @@
 						<sec:authentication var="user" property="principal"/> 
 						<sec:authorize access="isAuthenticated()">
 						
-							<li class="tbr-web">
+							<%-- <li class="tbr-web">
 								<a href=""> <img src="${ctx}${member.photo}"/></a>
-							</li>
+							</li> --%>
 							<li class="tbr-web">
 								<a href=""> ${member.name} 님 안녕하세요 :)</a>
 							</li>
-							<li class="tbr-web">
+							<%-- <li class="tbr-web">
 								<a href=""> ${user.username} 님 안녕하세요</a>
-							</li>
+							</li> --%>
 							<li class="tbr-web">
 								<a href="${ctx}/logout">Logout</a>
 							</li>
 							<li class="tbr-web">
 								<a href="">MyOrder</a>
+							</li>
+						</sec:authorize>
+						
+						<sec:authorize access="hasRole('ROLE_ADMIN')">	
+							<li class="tbr-web">
+								<a href="${ctx}/member/product/reg">제품 등록</a>
 							</li>
 							
 						</sec:authorize>
@@ -58,7 +64,7 @@
 					<a href="${ctx}/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</sec:authorize>
 			<sec:authorize access="isAuthenticated()">
-					<a href="${ctx}/member/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
+					<a href="${ctx}/product/list"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</sec:authorize>
 			</div>			
 			<nav class="nav-bar">
@@ -85,10 +91,10 @@
 						<a href="${ctx}/product/list">Product</a>
 					</li>
 					<li class="review">
-						<a href="${ctx}/member/review/list">Review</a>
+						<a href="${ctx}/review/list">Review</a>
 					</li>
 					<li class="contact">
-						<a href="${ctx}/member/contact">Contact</a>
+						<a href="${ctx}/contact">Contact</a>
 					</li>
 				</sec:authorize>
 				</ul>

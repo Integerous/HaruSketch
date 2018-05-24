@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.harusketch.entity.Member;
-import com.harusketch.service.MemberService;
+import com.harusketch.service.member.MemberService;
 
 @Controller("memberController")
 @RequestMapping("/member/")

@@ -2,6 +2,7 @@ package com.harusketch.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,6 +13,7 @@ public class Review {
 	private int id;
 	private String title;
 	private String content;
+	@Column(insertable=false)
 	private Date regDate;
 	private int hit;
 

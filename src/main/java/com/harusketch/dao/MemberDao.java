@@ -8,7 +8,5 @@ public interface MemberDao {
 
 	Member get(String mbrId);
 
-
-
 	
 }

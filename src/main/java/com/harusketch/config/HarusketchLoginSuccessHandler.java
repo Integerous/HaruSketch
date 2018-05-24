@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
 
-import com.harusketch.service.MemberService;
+import com.harusketch.service.member.MemberService;
 
 
 /*public class HarusketchLoginSuccessHandler

@@ -56,14 +56,16 @@
 								</div>
 							</div>
 						</li>
+						
+						<%-- <c:forEach var="product" items="${products}"> --%>
 						<li>
 							<div class="img-wrap">
-								<a href=""><img src="${ctx}/resources/images/keyring1.png"></a>
+								<a href="${ctx}/product/${product.id}"><img src="${product.img}"></a>
 							</div>
 							<div class="txt-wrap">
-								<a href="" class="item-title">캐리커쳐 키링</a>
+								<a href="${ctx}/product/${product.id}" class="item-title">${product.title}</a>
 								<div class="item-tag">
-									<b>15,000원</b>
+									<b>${product.price}</b>
 									<em>18,000원</em>
 								</div>
 							</div>

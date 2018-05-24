@@ -10,12 +10,12 @@
    	content="width=device-width, 
              initial-scale=1, minimum-scale=1, user-scalable=1"/>
              
-<title>노트 등록 폼</title>
+<title>제품 등록 폼</title>
 </head>
 <body>
 	<main>
 		<section>
-			<h1>노트 등록 폼</h1>
+			<h1>제품 등록 폼</h1>
 			<form method="post" entype="multipart/form-data">
 				<table>
 					<tr>
@@ -23,7 +23,19 @@
 						<td><input type="text" value="" name="title"/></td>
 					</tr>
 					<tr>
-						<th>첨부파일</th>
+						<th>카테고리</th>
+						<td><input type="text" value="" name="category"/></td>
+					</tr>
+					<tr>
+						<th>가격</th>
+						<td><input type="text" value="" name="price"/></td>
+					</tr>
+					<tr>
+						<th>재고</th>
+						<td><input type="text" value="" name="quantity"/></td>
+					</tr>
+					<tr>
+						<th>제품사진 첨부</th>
 						<td><input type="file" name="file"/></td>
 					</tr>
 					<tr>
@@ -31,7 +43,7 @@
 					</tr>
 					<tr>
 						<td>
-						<textarea rows="10" cols="40" name="content"></textarea>
+						<textarea rows="10" cols="40" name="description"></textarea>
 						</td>
 					</tr>	
 				</table>

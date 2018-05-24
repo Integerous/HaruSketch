@@ -14,7 +14,7 @@ public interface ProductDao {
 	
 	List<Product> getList(/*@Param("page")*/ Integer page);
 	
-	Product get(Integer id);
+	Product get(String id);
 
 	int insert(Product product);
 
