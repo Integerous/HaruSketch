@@ -6,13 +6,13 @@
 - 2018.03.29 ~ 현재 진행중
 
 ## 02. 개발 환경
-- Java 9.0.1 (이제는 고인이된..RIP)
-- Spring Framework 5.0.4 (친하게 지내자)
-- Spring Security 5.0.3 (인중과 고난)
-- Hibernate 5.2.16 (ORM = OTL)
-- Tomcat 9.0.7 (널 삭제하면 해결되더라)
-- Maven 2.6 (학기초 반짝친구 느낌)
-- Tiles 3.0.7 (굿잡)
-- AWS Linux Ubuntu EC2 (썸타는중)
-- AWS RDS (MySQL) (아직은 쉬운 친구)
-- Eclipse (안되면 다 네 탓 같음)
+- Java 9.0.1
+- Spring Framework 5.0.4
+- Spring Security 5.0.3
+- Hibernate 5.2.16
+- Tomcat 9.0.7
+- Maven 2.6
+- Tiles 3.0.7
+- AWS Linux Ubuntu EC2
+- AWS RDS (MySQL)
+- Eclipse
