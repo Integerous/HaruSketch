@@ -55,7 +55,7 @@ public class HarusketchLoginSuccessHandler
 				}
 				else { //직접 로그인을 요청한 경우
 					/*String defaultRole = service.getDefaultRolByMemberId(memberId);*/
-					redirectStrategy.sendRedirect(request, response, "/member/index");
+					redirectStrategy.sendRedirect(request, response, "/product/list");
 				}
 			}
 			

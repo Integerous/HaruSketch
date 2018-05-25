@@ -31,4 +31,10 @@ public class MemberService {
 		return member;
 	}
 
+	public Member getMemberInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }

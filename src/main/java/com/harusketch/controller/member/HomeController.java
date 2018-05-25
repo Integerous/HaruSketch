@@ -15,7 +15,7 @@ import com.harusketch.service.member.MemberService;
 
 @Controller("memberHomeController")
 @RequestMapping("/member/")
-@SessionAttributes({"member"})
+/*@SessionAttributes({"member"})*/
 public class HomeController {
 	
 	@Autowired
@@ -27,16 +27,14 @@ public class HomeController {
 	public String index(Principal principal, Model model) {
 		
 		
-		String mbrId = principal.getName();
-		//System.out.println(mbrId);
+		/*String mbrId = principal.getName();
 		
 		if(mbrId!=null) {
 			Member member = service.getMemberInfo(mbrId);
 			//System.out.println(member);
 			model.addAttribute("member", member);
-			
-			
-		}
+		}*/
+		
 		return "member.index";
 	}
 	

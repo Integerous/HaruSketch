@@ -17,6 +17,7 @@ public class HbMemberDao implements MemberDao {
 	   private SessionFactory sessionFactory;
 	
 	@Override
+	@Transactional
 	public int insert(Member member) {
 		 Session session = sessionFactory.getCurrentSession();
 		
@@ -26,6 +27,7 @@ public class HbMemberDao implements MemberDao {
 	}
 
 	@Override
+	@Transactional
 	public Member get(String mbrId) {
 		
 		Session session = sessionFactory.getCurrentSession();
@@ -34,6 +36,8 @@ public class HbMemberDao implements MemberDao {
 		
 		return member;
 	}
+
+	
 
 	
 }

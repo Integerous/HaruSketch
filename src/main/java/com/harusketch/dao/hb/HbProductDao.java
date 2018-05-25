@@ -15,10 +15,6 @@ import com.harusketch.dao.ProductDao;
 import com.harusketch.entity.Product;
 
 
-
-
-
-
 @Repository//Dao라는 의미?
 public class HbProductDao implements ProductDao {
    
@@ -39,7 +35,7 @@ public class HbProductDao implements ProductDao {
    
    @Transactional
    @Override
-   public Product get(Integer id) {
+   public Product get(String id) {
       Session session = sessionFactory.getCurrentSession();
       
       Product product = session.get(Product.class, id);

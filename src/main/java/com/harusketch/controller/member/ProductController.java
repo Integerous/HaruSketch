@@ -108,12 +108,12 @@ public class ProductController {
 		return "redirect:list"; //list로 가고싶다 하지만 이것은 view가 아니다.
 	}
 	
-	@RequestMapping("data")
+	/*@RequestMapping("data")
 	@ResponseBody
 	public String data() {
 		
 		return "안녕하세요"; //이거 view아니야 @ResponseBody붙일테니까 그냥 얘 출력해줘
-	}
+	}*/
 	
 	
 

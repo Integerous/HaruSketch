@@ -57,7 +57,7 @@
 </html>
 
 
-<script>
+<!-- <script>
 	window.addEventListener("load", function(){
 		
 		var submitButton = document.querySelector("input[type='submit']");
@@ -76,4 +76,10 @@
 			
 		};		
 	});
-</script>
+</script> -->
+
+
+
+
+
+
