@@ -45,7 +45,7 @@ public class ProductService {
 	}
 
 
-	public Product getProduct(String id) {
+	public Product getProduct(Integer id) {
 		
 			Product product = productDao.get(id);
 			

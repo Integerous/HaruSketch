@@ -12,8 +12,8 @@ import javax.persistence.Id;
 public class Product {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String title;
 	private String category;
 	private String price;
@@ -33,9 +33,18 @@ public class Product {
 
 
 
-	public Product(String id, String title, String category, String price, String quantity, String totalPrice,
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", title=" + title + ", category=" + category + ", price=" + price + ", quantity="
+				+ quantity + ", totalPrice=" + totalPrice + ", description=" + description + ", img=" + img
+				+ ", regDate=" + regDate + "]";
+	}
+
+
+
+	public Product(int id, String title, String category, String price, String quantity, String totalPrice,
 			String description, String img, Date regDate) {
-		super();
+		
 		this.id = id;
 		this.title = title;
 		this.category = category;
@@ -49,24 +58,19 @@ public class Product {
 
 
 
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", title=" + title + ", category=" + category + ", price=" + price + ", quantity="
-				+ quantity + ", totalPrice=" + totalPrice + ", description=" + description + ", img=" + img
-				+ ", regDate=" + regDate + "]";
-	}
 
 
-
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
 
 
-	public void setId(String id) {
+
+	public void setId(int id) {
 		this.id = id;
 	}
+
 
 
 
@@ -76,9 +80,11 @@ public class Product {
 
 
 
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 
 
 
@@ -88,9 +94,11 @@ public class Product {
 
 
 
+
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
 
 
 
@@ -100,9 +108,11 @@ public class Product {
 
 
 
+
 	public void setPrice(String price) {
 		this.price = price;
 	}
+
 
 
 
@@ -112,9 +122,11 @@ public class Product {
 
 
 
+
 	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
+
 
 
 
@@ -124,9 +136,11 @@ public class Product {
 
 
 
+
 	public void setTotalPrice(String totalPrice) {
 		this.totalPrice = totalPrice;
 	}
+
 
 
 
@@ -136,27 +150,32 @@ public class Product {
 
 
 
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
 
 
-	public String getImg() {
+
+	public String getFile() {
 		return img;
 	}
 
 
 
-	public void setImg(String img) {
+
+	public void setFile(String img) {
 		this.img = img;
 	}
+
 
 
 
 	public Date getRegDate() {
 		return regDate;
 	}
+
 
 
 

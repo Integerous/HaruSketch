@@ -27,7 +27,7 @@ public class HbProductDao implements ProductDao {
       
       //session 팩토리에서 꺼내오기!
       Session session = sessionFactory.getCurrentSession(); 
-      Query<Product> query = session.createQuery("from Product");
+      Query<Product> query = session.createQuery("from Product order by regDate desc", Product.class);
       List<Product> list = query.getResultList();
       
       return list;
@@ -35,7 +35,7 @@ public class HbProductDao implements ProductDao {
    
    @Transactional
    @Override
-   public Product get(String id) {
+   public Product get(Integer id) {
       Session session = sessionFactory.getCurrentSession();
       
       Product product = session.get(Product.class, id);
@@ -47,7 +47,20 @@ public class HbProductDao implements ProductDao {
    @Override
    public int insert(Product product) {
       
+      Session session = sessionFactory.getCurrentSession();
+      
+      session.save(product);
+      
+      System.out.println(product);
+	   
+	   
       return 0;
    }
 
 }
+
+
+
+
+
+

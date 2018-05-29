@@ -16,7 +16,7 @@
 	<main>
 		<section>
 			<h1>제품 등록 폼</h1>
-			<form method="post" entype="multipart/form-data">
+			<form method="post" enctype="multipart/form-data">
 				<table>
 					<tr>
 						<th>제목</th>
@@ -36,7 +36,7 @@
 					</tr>
 					<tr>
 						<th>제품사진 첨부</th>
-						<td><input type="file" name="file"/></td>
+						<td><input type="file" multiple="multiple" name="img"/></td>
 					</tr>
 					<tr>
 						<th>내용</th>
@@ -44,7 +44,7 @@
 					<tr>
 						<td>
 						<textarea rows="10" cols="40" name="description"></textarea>
-						</td>
+						</td>	
 					</tr>	
 				</table>
 				<div>
