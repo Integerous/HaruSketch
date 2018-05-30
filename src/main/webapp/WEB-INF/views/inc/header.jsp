@@ -64,7 +64,7 @@
 					<a href="${ctx}/index"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</sec:authorize>
 			<sec:authorize access="isAuthenticated()">
-					<a href="${ctx}/product/list"><img src="${ctx}/resources/images/haru-logo.png"></a>
+					<a href="${ctx}/member/product/list"><img src="${ctx}/resources/images/haru-logo.png"></a>
 			</sec:authorize>
 			</div>			
 			<nav class="nav-bar">
@@ -74,7 +74,7 @@
 						<a href="${ctx}/about">About</a>
 					</li>
 					<li class="product">
-						<a href="${ctx}/product/list">Product</a>
+						<a href="${ctx}/member/product/list">Product</a>
 					</li>
 					<li class="review">
 						<a href="${ctx}/review/list">Review</a>
@@ -88,7 +88,7 @@
 						<a href="${ctx}/about">About</a>
 					</li>
 					<li class="product">
-						<a href="${ctx}/product/list">Product</a>
+						<a href="${ctx}/member/product/list">Product</a>
 					</li>
 					<li class="review">
 						<a href="${ctx}/review/list">Review</a>

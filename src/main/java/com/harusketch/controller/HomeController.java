@@ -19,7 +19,7 @@ public class HomeController {
 	@GetMapping("index")
 	public String index() {
 		
-		return "product.list";
+		return "member.product.list";
 	}
 	
 	@GetMapping("about")

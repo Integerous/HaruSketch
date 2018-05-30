@@ -27,7 +27,7 @@ public class ProductService {
 		return list;
 	}
 	/*@Transactional*/
-	public Product getProduct(String id) {
+	public Product getProduct(Integer id) {
 		
 		productDao.get(id);
 		
